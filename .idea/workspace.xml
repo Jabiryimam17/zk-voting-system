@@ -1,4 +1,333 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PropertiesComponent">{}</component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bff0f43c-f2de-4352-a79a-8b4840aae26f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/PROOF/powersOfTau28_hez_final_17.ptau" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PROOF/sig_input.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ethereum/contracts/PartyManager.sol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ethereum/contracts/TreasureManager.sol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ethereum/contracts/Verifier.sol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/parties_hashes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/merkletreeids/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/merkletreeids/GenPriv.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/merkletreeids/GenSign.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/merkletreeids/MerkleTree.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/merkletreeids/RegisterCitizens.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/merkletreeids/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/merkletreeids/input.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/merkletreeids/leveldb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/merkletreeids/poseidon.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/merkletreeids/temp/000016.ldb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/merkletreeids/temp/000018.ldb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/merkletreeids/temp/000021.ldb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/merkletreeids/temp/000024.ldb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/merkletreeids/temp/000025.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/merkletreeids/temp/CURRENT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/merkletreeids/temp/LOCK" beforeDir="false" afterPath="$PROJECT_DIR$/PROOF/GenProof/GenProof.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/merkletreeids/temp/LOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/merkletreeids/temp/LOG.old" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/merkletreeids/temp/MANIFEST-000023" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/merkletreeids/test_merkle.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/IntBuffConv.js" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/IntBuffConv.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="Python Script" />
+        <option value="Solidity Contract" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform)); sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo, NoAppException&#10;for module in [&quot;main.py&quot;, &quot;wsgi.py&quot;, &quot;app.py&quot;]:&#10;    try: locals().update(ScriptInfo(app_import_path=module, create_app=None).load_app().make_shell_context()); print(&quot;\nFlask App: %s&quot; % app.import_name); break&#10;    except NoAppException: pass">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform)); sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo, NoAppException&#10;for module in [&quot;main.py&quot;, &quot;wsgi.py&quot;, &quot;app.py&quot;]:&#10;    try: locals().update(ScriptInfo(app_import_path=module, create_app=None).load_app().make_shell_context()); print(&quot;\nFlask App: %s&quot; % app.import_name); break&#10;    except NoAppException: pass" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Jabiryimam17&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Jabiryimam17/MainVoting.git&quot;,
+    &quot;accountId&quot;: &quot;09c46645-c853-485b-abe8-2023978b66a0&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/node_modules/@chainlink/contracts/src/v0.8/shared/access/ConfirmedOwner.sol" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/node_modules/@chainlink/contracts/src/v0.8/shared/access/ConfirmedOwnerWithProposal.sol" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2xH8TNvGI9SKEp4suAqC1SOFzIg" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.Next.js: debug client-side.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Node.js.GenProof.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.GenSign.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.IntBuffConv.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.babyjub.js.executor&quot;: &quot;Debug&quot;,
+    &quot;Node.js.cryptohelpers.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.decryptit.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.election.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.index.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.test.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.web3.js.executor&quot;: &quot;Run&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-WindowsDefender&quot;: &quot;Microsoft Defender may affect IDE&quot;,
+    &quot;Notification.DoNotAsk-WindowsDefender&quot;: &quot;true&quot;,
+    &quot;Python tests.Python tests in test_merkle.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.GenPriv.executor&quot;: &quot;Run&quot;,
+    &quot;Python.MerkleTree.executor&quot;: &quot;Run&quot;,
+    &quot;Python.RegisterCitizens.executor&quot;: &quot;Run&quot;,
+    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.poseidon.executor&quot;: &quot;Run&quot;,
+    &quot;ReactCreateComponentLastSelected&quot;: &quot;arrowFunctionComponent&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jabir/WebstormProjects/Voting/public&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Jabir\\WebstormProjects\\Voting\\node_modules\\prettier&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.3.5\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
+        <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
+        <entry key="com.intellij.reactbuddy.storybook" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jabir\WebstormProjects\Voting\public" />
+      <recent name="C:\Users\Jabir\WebstormProjects\Voting\PROOF" />
+      <recent name="C:\Users\Jabir\WebstormProjects\Voting\utilities" />
+      <recent name="C:\Users\Jabir\WebstormProjects\Voting\ethereum\contracts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jabir\WebstormProjects\Voting\public" />
+      <recent name="C:\Users\Jabir\WebstormProjects\Voting\merkletreeids" />
+      <recent name="C:\Users\Jabir\WebstormProjects\Voting\ethereum" />
+      <recent name="C:\Users\Jabir\WebstormProjects\Voting\ethereum\contracts" />
+      <recent name="C:\Users\Jabir\WebstormProjects\Voting\pages" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409" />
+        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-IU-252.23892.409" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bff0f43c-f2de-4352-a79a-8b4840aae26f" name="Changes" comment="" />
+      <created>1747583646853</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747583646853</updated>
+      <workItem from="1747583648593" duration="942000" />
+      <workItem from="1747587768039" duration="3950000" />
+      <workItem from="1747656954873" duration="13000" />
+      <workItem from="1747663902561" duration="8000" />
+      <workItem from="1747675987048" duration="4247000" />
+      <workItem from="1747825014257" duration="3857000" />
+      <workItem from="1747911511705" duration="155000" />
+      <workItem from="1747911723302" duration="6389000" />
+      <workItem from="1747921560507" duration="3252000" />
+      <workItem from="1747999839301" duration="3052000" />
+      <workItem from="1748006123583" duration="4636000" />
+      <workItem from="1748011063293" duration="184000" />
+      <workItem from="1748011521515" duration="863000" />
+      <workItem from="1748082419452" duration="2163000" />
+      <workItem from="1748084702482" duration="12998000" />
+      <workItem from="1748170805404" duration="13632000" />
+      <workItem from="1748285841115" duration="5476000" />
+      <workItem from="1748340128786" duration="6359000" />
+      <workItem from="1748348056524" duration="1054000" />
+      <workItem from="1748349273393" duration="7165000" />
+      <workItem from="1748429831081" duration="13573000" />
+      <workItem from="1748517479130" duration="12001000" />
+      <workItem from="1748603114814" duration="1004000" />
+      <workItem from="1748621585208" duration="627000" />
+      <workItem from="1748714903230" duration="5446000" />
+      <workItem from="1748720613974" duration="7918000" />
+      <workItem from="1748775751684" duration="14277000" />
+      <workItem from="1748863019796" duration="189000" />
+      <workItem from="1748863297280" duration="3514000" />
+      <workItem from="1748876132447" duration="98000" />
+      <workItem from="1748949209934" duration="4316000" />
+      <workItem from="1748966916779" duration="6253000" />
+      <workItem from="1749039169346" duration="6374000" />
+      <workItem from="1749120927219" duration="10788000" />
+      <workItem from="1749294225764" duration="11448000" />
+      <workItem from="1749381454587" duration="12606000" />
+      <workItem from="1749466757619" duration="11169000" />
+      <workItem from="1749481238138" duration="80000" />
+      <workItem from="1749551887168" duration="14159000" />
+      <workItem from="1749638944967" duration="8274000" />
+      <workItem from="1749735875816" duration="541000" />
+      <workItem from="1751285236917" duration="1598000" />
+      <workItem from="1751541924105" duration="1906000" />
+      <workItem from="1751548232908" duration="80000" />
+      <workItem from="1751548517294" duration="102000" />
+      <workItem from="1751555249114" duration="469000" />
+      <workItem from="1751561531817" duration="2262000" />
+      <workItem from="1751564711254" duration="1843000" />
+      <workItem from="1751625251817" duration="4178000" />
+      <workItem from="1751647486000" duration="2430000" />
+      <workItem from="1752057664814" duration="2510000" />
+      <workItem from="1752060352403" duration="11531000" />
+      <workItem from="1752149129564" duration="12150000" />
+      <workItem from="1752238371373" duration="10460000" />
+      <workItem from="1752300516661" duration="8927000" />
+      <workItem from="1752321031315" duration="9296000" />
+      <workItem from="1752409455767" duration="9737000" />
+      <workItem from="1752477870999" duration="4145000" />
+      <workItem from="1752499772528" duration="10123000" />
+      <workItem from="1752920084382" duration="14335000" />
+      <workItem from="1753007092775" duration="648000" />
+      <workItem from="1753008206095" duration="82000" />
+      <workItem from="1753008401180" duration="4890000" />
+      <workItem from="1753095919350" duration="39000" />
+      <workItem from="1753096098160" duration="6088000" />
+      <workItem from="1753107194641" duration="832000" />
+      <workItem from="1753268147672" duration="12649000" />
+      <workItem from="1753352055130" duration="1990000" />
+      <workItem from="1753355953250" duration="10663000" />
+      <workItem from="1753438512482" duration="9347000" />
+      <workItem from="1753785583393" duration="11910000" />
+      <workItem from="1753871177177" duration="268000" />
+      <workItem from="1754417982611" duration="6449000" />
+      <workItem from="1754677695379" duration="3664000" />
+      <workItem from="1754741436142" duration="172000" />
+      <workItem from="1754762818053" duration="5296000" />
+      <workItem from="1754830680827" duration="7059000" />
+      <workItem from="1754847079840" duration="6203000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/components/VerifyPhone.jsx</url>
+          <line>151</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/components/VerifyPhone.jsx</url>
+          <line>74</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Voting$poseidon.coverage" NAME="poseidon Coverage Results" MODIFIED="1752930294601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/merkletreeids" />
+    <SUITE FILE_PATH="coverage/Voting$RegisterCitizens.coverage" NAME="RegisterCitizens Coverage Results" MODIFIED="1752928069175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/merkletreeids" />
+    <SUITE FILE_PATH="coverage/Voting$.coverage" NAME=" Coverage Results" MODIFIED="1752065401162" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/merkletreeids" />
+    <SUITE FILE_PATH="coverage/Voting$GenPriv.coverage" NAME="GenPriv Coverage Results" MODIFIED="1752326552153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/merkletreeids" />
+    <SUITE FILE_PATH="coverage/Voting$MerkleTree.coverage" NAME="MerkleTree Coverage Results" MODIFIED="1752925000887" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/merkletreeids" />
+    <SUITE FILE_PATH="coverage/Voting$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1751636412613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/merkletreeids" />
+  </component>
 </project>
