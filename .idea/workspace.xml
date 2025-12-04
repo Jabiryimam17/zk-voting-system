@@ -5,49 +5,620 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bff0f43c-f2de-4352-a79a-8b4840aae26f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PROOF/powersOfTau28_hez_final_17.ptau" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PROOF/sig_input.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethereum/contracts/PartyManager.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethereum/contracts/TreasureManager.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethereum/contracts/Verifier.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/api/parties_hashes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/database/CreateConnection.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/middlewares/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/routes/parties.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/routes/users.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/utilities/address.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/utilities/jwt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/components.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/ethereum/contracts/build/election_cont.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/ethereum/contracts/build/verifier_cont.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/ethereum/election.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/ethereum/election_deploy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/ethereum/ether.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/ethereum/transfer_token.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/ethereum/verifier_deploy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/jsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/next.config.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/file.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/globe.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/next.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/vercel.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/window.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/globals.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/layout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/login/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/parties/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/party/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/registerparty/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/registerparty/partyform.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/results/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/setup/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/signup/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/unauthorized/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/verifyemail/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/CommonHeader.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/VerifyPhone.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/table.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/lib/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/output.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tailwind.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/utilities/IntBuffConv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/utilities/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/data_source_mapping.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/data_source_mapping.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/merkletreeids/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/merkletreeids/GenPriv.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/merkletreeids/GenSign.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/merkletreeids/MerkleTree.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/merkletreeids/RegisterCitizens.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/merkletreeids/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/merkletreeids/input.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/merkletreeids/leveldb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/merkletreeids/poseidon.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/merkletreeids/temp/000016.ldb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/merkletreeids/temp/000018.ldb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/merkletreeids/temp/000021.ldb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/merkletreeids/temp/000024.ldb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/merkletreeids/temp/000025.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/merkletreeids/temp/CURRENT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/merkletreeids/temp/LOCK" beforeDir="false" afterPath="$PROJECT_DIR$/PROOF/GenProof/GenProof.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/merkletreeids/temp/LOG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/merkletreeids/temp/LOG.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/merkletreeids/temp/MANIFEST-000023" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/merkletreeids/test_merkle.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/build-manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/.rscinfo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development-fallback/0.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development-fallback/1.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development-fallback/2.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development-fallback/index.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development-fallback/index.pack.gz.old" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/0.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/1.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/10.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/11.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/12.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/13.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/ethioflag.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/14.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/15.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/16.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/17.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/18.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/19.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/2.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/20.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/21.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/22.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/23.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/24.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/25.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/26.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/27.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/28.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/29.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/3.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/30.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/31.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/32.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/33.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/34.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/35.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/36.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/37.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/38.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/39.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/4.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/40.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/41.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/42.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/5.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/6.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/7.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/8.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/9.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/index.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/index.pack.gz.old" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/0.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/1.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/10.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/11.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/12.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/13.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/14.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/15.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/16.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/17.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/18.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/19.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/2.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/20.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/21.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/22.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/23.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/24.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/25.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/26.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/27.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/28.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/29.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/3.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/4.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/5.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/6.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/7.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/8.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/9.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/index.pack.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/index.pack.gz.old" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/react-loadable-manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/_error.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/interception-route-rewrite-manifest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/middleware-build-manifest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/middleware-manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/middleware-react-loadable-manifest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/next-font-manifest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/next-font-manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages-manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages/_app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages/_document.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages/_error.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages/api/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages/api/parties.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages/api/party.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages/api/party_register.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages/api/register_user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages/api/verify_email.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages/parties.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages/party.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages/party_register.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages/signup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages/verifyemail.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/vendor-chunks/@mui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/vendor-chunks/@swc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/vendor-chunks/next.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/vendor-chunks/semantic-ui-css.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/webpack-api-runtime.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/webpack-runtime.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/chunks/_error.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/chunks/_pages-dir-browser_node_modules_next_dist_pages__app_js.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/chunks/_pages-dir-browser_node_modules_next_dist_pages__error_js.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/chunks/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/chunks/pages/_app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/chunks/pages/_error.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/chunks/pages/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/chunks/pages/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/chunks/pages/parties.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/chunks/pages/party.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/chunks/pages/party_register.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/chunks/pages/signup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/chunks/pages/verifyemail.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/chunks/polyfills.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/chunks/react-refresh.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/chunks/webpack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/development/_buildManifest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/development/_ssgManifest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/media/brand-icons.1a368124.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/media/brand-icons.a5c2b578.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/media/brand-icons.b0ccb869.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/media/brand-icons.d3632e64.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/media/brand-icons.ff793786.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/media/flags.6989ab0a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/media/icons.004393de.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/media/icons.62a2bfb1.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/media/icons.8ec0357f.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/media/icons.a93cf03c.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/media/icons.fa5c061f.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/media/outline-icons.315b68a4.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/media/outline-icons.3c7c2806.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/media/outline-icons.7af2e9ac.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/media/outline-icons.ba204dab.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/media/outline-icons.d24ca609.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/017fa796d98fed9c.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/060aa84df0df7430.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/0d222495b6465c8d.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/0ffbe822f261f0aa.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/119305bdad7896a3.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/192d9caa03901be2.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/1acdb994d8c3e526.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/21c684d80695fbda.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/220948e6efb2e30a.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/235fbdd2fedfadb3.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/2615f35f00a2fc28.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/37d07d7fa201a49a.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/3b5b19dfb62a36ad.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/3b6cbbf2569df1e4.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/3f95a68ac8e605e4.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/43dbd568c39f05b5.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/445142c9092315bb.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/46f118c4e72c3580.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/4bd066789226558c.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/4dc5a144399d2342.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/532ad7ee8b2fd82a.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/633457081244afec._.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/68a98658ef3b527a.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/6a3fcb8607588631.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/70751e3c387132a5.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/725658c4217138bb.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/7c7469e69a52c670.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/7d6a60f6205112b0.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/81ff0fba650c0c98.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/820cdc47b15c6315.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/8b45d1db819f1af4.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/976eab0a4261bcd4.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/989c77b1f23ee8ef.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/98a5a760458c7c36.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/9f79fd4509cc0839.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/af35b34c183352b8.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/b1d3925c379cac93.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/b41eff2789778609.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/b54cb36a3d94b296.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/bbb6fe91792ea02c.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/bbcefb392375a2d6.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/bd8b223c7c1ba292.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/c879b5ce7dca5bad.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/d0c71cb7051ccccc.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/d28d827780111268.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/d2bd25d7ee6ca5fa.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/d7011efcf667ffae.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/dbcbe4cd4c99c689.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/de2b6df22d962b77.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/e321939f4931e600.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/e80c6846bdc9f456.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/f0ea9fedc3c04f8b.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/f8adb749ac286b09.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/fc4c98da8ba1b4d8.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/fcf84acffd240a1f.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/fd74bb37e1e68195.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/index.119305bdad7896a3.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/index.1acdb994d8c3e526.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/index.220948e6efb2e30a.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/index.b54cb36a3d94b296.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/index.bbb6fe91792ea02c.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/index.d28d827780111268.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/index.e321939f4931e600.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/parties.060aa84df0df7430.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/parties.bd8b223c7c1ba292.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/parties.dbcbe4cd4c99c689.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/party.235fbdd2fedfadb3.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/party.3b6cbbf2569df1e4.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/party.445142c9092315bb.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/party.46f118c4e72c3580.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/party.4dc5a144399d2342.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/party.532ad7ee8b2fd82a.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/party.70751e3c387132a5.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/party.81ff0fba650c0c98.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/party.820cdc47b15c6315.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/party.8b45d1db819f1af4.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/party.98a5a760458c7c36.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/party.b1d3925c379cac93.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/party.b41eff2789778609.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/party.d0c71cb7051ccccc.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/party.de2b6df22d962b77.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/party.f0ea9fedc3c04f8b.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/party_register.017fa796d98fed9c.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/party_register.0ffbe822f261f0aa.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/party_register.68a98658ef3b527a.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/party_register.725658c4217138bb.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/pages/party_register.fcf84acffd240a1f.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.017fa796d98fed9c.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.060aa84df0df7430.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.0d222495b6465c8d.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.0ffbe822f261f0aa.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.119305bdad7896a3.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.192d9caa03901be2.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.1acdb994d8c3e526.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.21c684d80695fbda.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.220948e6efb2e30a.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.235fbdd2fedfadb3.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.2615f35f00a2fc28.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.37d07d7fa201a49a.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.3b5b19dfb62a36ad.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.3b6cbbf2569df1e4.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.3f95a68ac8e605e4.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.43dbd568c39f05b5.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.445142c9092315bb.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.46f118c4e72c3580.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.4bd066789226558c.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.4dc5a144399d2342.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.532ad7ee8b2fd82a.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.68a98658ef3b527a.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.6a3fcb8607588631.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.70751e3c387132a5.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.725658c4217138bb.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.7c7469e69a52c670.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.7d6a60f6205112b0.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.81ff0fba650c0c98.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.820cdc47b15c6315.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.8b45d1db819f1af4.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.976eab0a4261bcd4.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.989c77b1f23ee8ef.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.98a5a760458c7c36.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.9f79fd4509cc0839.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.af35b34c183352b8.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.b1d3925c379cac93.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.b41eff2789778609.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.b54cb36a3d94b296.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.bbb6fe91792ea02c.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.bbcefb392375a2d6.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.bd8b223c7c1ba292.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.c879b5ce7dca5bad.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.d0c71cb7051ccccc.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.d28d827780111268.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.d2bd25d7ee6ca5fa.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.d7011efcf667ffae.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.dbcbe4cd4c99c689.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.de2b6df22d962b77.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.e321939f4931e600.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.e80c6846bdc9f456.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.f0ea9fedc3c04f8b.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.f8adb749ac286b09.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.fc4c98da8ba1b4d8.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.fcf84acffd240a1f.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.fd74bb37e1e68195.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/trace" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/GenProof/GenProof.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/GenProof.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/Verifier.sol" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/Verifier.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/VerifyVoter.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/VerifyVoter.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/VerifyVoter.r1cs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/VerifyVoter.r1cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/VerifyVoter.sym" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/VerifyVoter.sym" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/VerifyVoter_js/VerifyVoter.wasm" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/VerifyVoter_js/VerifyVoter.wasm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/VerifyVoter_js/generate_witness.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/VerifyVoter_js/generate_witness.cjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/VerifyVoter_js/witness_calculator.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/VerifyVoter_js/witness_calculator.cjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/aliascheck.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/aliascheck.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/babyjub.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/babyjub.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/binsub.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/binsub.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/binsum.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/binsum.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/bitify.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/bitify.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/comparators.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/comparators.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/compconstant.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/compconstant.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/eddsa.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/eddsa.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/eddsamimc.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/eddsamimc.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/eddsamimcsponge.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/eddsamimcsponge.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/eddsaposeidon.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/eddsaposeidon.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/escalarmul.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/escalarmul.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/escalarmulany.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/escalarmulany.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/escalarmulfix.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/escalarmulfix.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/escalarmulw4table.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/escalarmulw4table.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/gates.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/gates.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/mimc.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/mimc.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/mimcsponge.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/mimcsponge.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/montgomery.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/montgomery.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/multiplexer.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/multiplexer.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/mux1.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/mux1.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/mux2.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/mux2.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/mux3.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/mux3.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/mux4.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/mux4.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/pedersen.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/pedersen.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/pedersen_old.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/pedersen_old.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/pointbits.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/pointbits.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/poseidon.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/poseidon.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/poseidon_constants.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/poseidon_constants.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/poseidon_constants_old.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/poseidon_constants_old.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/poseidon_old.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/poseidon_old.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/sha256/ch.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/sha256/ch.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/sha256/constants.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/sha256/constants.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/sha256/main.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/sha256/main.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/sha256/maj.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/sha256/maj.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/sha256/rotate.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/sha256/rotate.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/sha256/sha256.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/sha256/sha256.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/sha256/sha256_2.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/sha256/sha256_2.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/sha256/sha256compression.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/sha256/sha256compression.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/sha256/sha256compression_function.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/sha256/sha256compression_function.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/sha256/shift.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/sha256/shift.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/sha256/sigma.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/sha256/sigma.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/sha256/sigmaplus.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/sha256/sigmaplus.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/sha256/t1.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/sha256/t1.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/sha256/t2.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/sha256/t2.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/sha256/xor3.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/sha256/xor3.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/sign.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/sign.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/smt/smthash_mimc.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/smt/smthash_mimc.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/smt/smthash_poseidon.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/smt/smthash_poseidon.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/smt/smtlevins.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/smt/smtlevins.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/smt/smtprocessor.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/smt/smtprocessor.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/smt/smtprocessorlevel.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/smt/smtprocessorlevel.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/smt/smtprocessorsm.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/smt/smtprocessorsm.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/smt/smtverifier.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/smt/smtverifier.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/smt/smtverifierlevel.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/smt/smtverifierlevel.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/smt/smtverifiersm.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/smt/smtverifiersm.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/circuits/switcher.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/circuits/switcher.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/doc/root_transfer.monopic" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/doc/root_transfer.monopic" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/doc/smt_diagram_0.monopic" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/doc/smt_diagram_0.monopic" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/doc/smt_diagram_1.monopic" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/doc/smt_diagram_1.monopic" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/doc/smt_hash.monopic" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/doc/smt_hash.monopic" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/doc/smt_levins.monopic" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/doc/smt_levins.monopic" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/doc/smt_sm.monopic" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/doc/smt_sm.monopic" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/doc/smt_verifier_sm.monopic" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/doc/smt_verifier_sm.monopic" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/doc/voting.monopic" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/doc/voting.monopic" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/doc/window.monopic" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/doc/window.monopic" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/doc/window_chain.monopic" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/doc/window_chain.monopic" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/aliascheck.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/aliascheck.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/babyjub.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/babyjub.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/binsub.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/binsub.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/binsum.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/binsum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/aliascheck_test.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/aliascheck_test.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/babyadd_tester.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/babyadd_tester.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/babycheck_test.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/babycheck_test.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/babypbk_test.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/babypbk_test.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/binsub_test.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/binsub_test.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/constants_test.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/constants_test.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/eddsa_test.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/eddsa_test.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/eddsamimc_test.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/eddsamimc_test.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/eddsaposeidon_test.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/eddsaposeidon_test.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/edwards2montgomery.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/edwards2montgomery.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/escalarmul_min_test.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/escalarmul_min_test.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/escalarmul_test.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/escalarmul_test.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/escalarmul_test_min.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/escalarmul_test_min.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/escalarmulany_test.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/escalarmulany_test.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/escalarmulfix_test.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/escalarmulfix_test.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/escalarmulw4table.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/escalarmulw4table.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/escalarmulw4table_test.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/escalarmulw4table_test.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/escalarmulw4table_test3.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/escalarmulw4table_test3.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/greatereqthan.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/greatereqthan.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/greaterthan.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/greaterthan.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/isequal.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/isequal.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/iszero.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/iszero.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/lesseqthan.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/lesseqthan.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/lessthan.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/lessthan.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/mimc_sponge_hash_test.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/mimc_sponge_hash_test.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/mimc_sponge_test.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/mimc_sponge_test.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/mimc_test.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/mimc_test.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/montgomery2edwards.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/montgomery2edwards.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/montgomeryadd.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/montgomeryadd.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/montgomerydouble.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/montgomerydouble.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/mux1_1.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/mux1_1.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/mux2_1.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/mux2_1.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/mux3_1.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/mux3_1.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/mux4_1.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/mux4_1.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/pedersen2_test.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/pedersen2_test.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/pedersen_test.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/pedersen_test.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/pointbits_loopback.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/pointbits_loopback.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/poseidon3_test.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/poseidon3_test.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/poseidon6_test.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/poseidon6_test.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/poseidonex_test.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/poseidonex_test.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/sha256_2_test.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/sha256_2_test.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/sha256_test448.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/sha256_test448.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/sha256_test512.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/sha256_test512.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/sign_test.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/sign_test.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/smtprocessor10_test.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/smtprocessor10_test.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/smtverifier10_test.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/smtverifier10_test.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/circuits/sum_test.circom" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/circuits/sum_test.circom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/comparators.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/comparators.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/eddsa.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/eddsa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/eddsamimc.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/eddsamimc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/eddsaposeidon.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/eddsaposeidon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/escalarmul.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/escalarmul.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/escalarmulany.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/escalarmulany.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/escalarmulfix.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/escalarmulfix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/helpers/printsignal.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/helpers/printsignal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/helpers/sha256.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/helpers/sha256.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/mimccircuit.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/mimccircuit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/mimcspongecircuit.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/mimcspongecircuit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/montgomery.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/montgomery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/multiplexer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/multiplexer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/pedersen.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/pedersen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/pedersen2.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/pedersen2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/point2bits.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/point2bits.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/poseidoncircuit.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/poseidoncircuit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/sha256.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/sha256.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/sign.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/sign.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/smtprocessor.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/smtprocessor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/circomlib/test/smtverifier.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/circomlib/test/smtverifier.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/input.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/input.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/merkle_input.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/merkle_input.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/powersOfTau28_hez_final_17.ptau" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/powersOfTau28_hez_final_17.ptau" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/sig_input.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/sig_input.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/verification_key.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/verification_key.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/verifier.zkey" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/verifier.zkey" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/witness.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/witness.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROOF/witness.wtns" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/witness.wtns" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/CommonHeader.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Layout.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/VerificationPopup.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/VerificationPopup.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/VerifyPhone.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/CreateConnection.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethereum/contracts/Election.sol" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/ethereum/contracts/Election.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethereum/contracts/PartyManager.sol" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/ethereum/contracts/PartyManager.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethereum/contracts/TreasureManager.sol" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/ethereum/contracts/TreasureManager.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethereum/contracts/Verifier.sol" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/ethereum/contracts/Verifier.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethereum/contracts/build/election_abi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethereum/contracts/build/election_bytecode.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethereum/contracts/example.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethereum/election.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethereum/ether.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethereum/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/ethereum/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keys/private.key" beforeDir="false" afterPath="$PROJECT_DIR$/backend/keys/private.key" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keys/public.key" beforeDir="false" afterPath="$PROJECT_DIR$/backend/keys/public.key" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/auth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/IntBuffConv.js" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/IntBuffConv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/PartyForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/election_status.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/logout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/parties.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/parties_hashes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/party.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/party_register.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/register_user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/request_verification.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/resend_code.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utilities/sendemail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/verify_email.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/parties.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/party.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/party_register.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/signup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/verifyemail.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Images/download.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/download.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/VerifyVoter_js/VerifyVoter.wasm" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/VerifyVoter_js/VerifyVoter.wasm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/VerifyVoter_js/generate_witness.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/VerifyVoter_js/generate_witness.cjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/VerifyVoter_js/witness_calculator.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/VerifyVoter_js/witness_calculator.cjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/verification_key.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/verification_key.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/verifier.zkey" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/verifier.zkey" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/IntBuffConv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/SendEmail.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/SendEmail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/badmsges.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/badmsges.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/build/main.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/build/main.cjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/hardhat.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/hardhat.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/rollup.cjs.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/rollup.cjs.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/src/babyjub.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/src/babyjub.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/src/eddsa.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/src/eddsa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/src/evmasm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/src/evmasm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/src/mimc7.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/src/mimc7.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/src/mimc7_gencontract.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/src/mimc7_gencontract.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/src/mimc7_print_iv.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/src/mimc7_print_iv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/src/mimc7_printconstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/src/mimc7_printconstants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/src/mimc7_printcontract.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/src/mimc7_printcontract.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/src/mimcsponge.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/src/mimcsponge.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/src/mimcsponge_gencontract.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/src/mimcsponge_gencontract.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/src/mimcsponge_printconstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/src/mimcsponge_printconstants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/src/mimcsponge_printcontract.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/src/mimcsponge_printcontract.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/src/pedersen_hash.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/src/pedersen_hash.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/src/pedersen_printbases.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/src/pedersen_printbases.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/src/poseidon_constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/src/poseidon_constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/src/poseidon_constants.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/src/poseidon_constants.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/src/poseidon_constants_opt.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/src/poseidon_constants_opt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/src/poseidon_constants_opt.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/src/poseidon_constants_opt.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/src/poseidon_gencontract.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/src/poseidon_gencontract.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/src/poseidon_opt.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/src/poseidon_opt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/src/poseidon_printcontract.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/src/poseidon_printcontract.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/src/poseidon_printmatrix.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/src/poseidon_printmatrix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/src/poseidon_reference.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/src/poseidon_reference.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/src/poseidon_wasm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/src/poseidon_wasm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/src/smt.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/src/smt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/src/smt_hashes_mimc.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/src/smt_hashes_mimc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/src/smt_hashes_poseidon.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/src/smt_hashes_poseidon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/src/smt_memdb.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/src/smt_memdb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/src/testblake.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/src/testblake.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/circomlibjs/tools/poseidon_optimize_constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/circomlibjs/tools/poseidon_optimize_constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/cryptohelpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/cryptohelpers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/decryptit.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/decryptit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/encryptit.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/encryptit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/jwt.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/jwt.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="315" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="Python Script" />
         <option value="Solidity Contract" />
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -86,6 +657,9 @@
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -100,61 +674,74 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JavaScript Debug.Next.js: debug client-side.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Node.js.GenProof.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.GenSign.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.IntBuffConv.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.babyjub.js.executor&quot;: &quot;Debug&quot;,
-    &quot;Node.js.cryptohelpers.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.decryptit.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.election.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.index.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.test.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.web3.js.executor&quot;: &quot;Run&quot;,
-    &quot;Notification.DisplayName-DoNotAsk-WindowsDefender&quot;: &quot;Microsoft Defender may affect IDE&quot;,
-    &quot;Notification.DoNotAsk-WindowsDefender&quot;: &quot;true&quot;,
-    &quot;Python tests.Python tests in test_merkle.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.GenPriv.executor&quot;: &quot;Run&quot;,
-    &quot;Python.MerkleTree.executor&quot;: &quot;Run&quot;,
-    &quot;Python.RegisterCitizens.executor&quot;: &quot;Run&quot;,
-    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
-    &quot;Python.poseidon.executor&quot;: &quot;Run&quot;,
-    &quot;ReactCreateComponentLastSelected&quot;: &quot;arrowFunctionComponent&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jabir/WebstormProjects/Voting/public&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Jabir\\WebstormProjects\\Voting\\node_modules\\prettier&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.3.5\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "JavaScript Debug.Next.js: debug client-side.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Node.js.CreateConnection.js.executor": "Run",
+    "Node.js.GenProof.js.executor": "Run",
+    "Node.js.GenSign.js.executor": "Run",
+    "Node.js.IntBuffConv.js.executor": "Run",
+    "Node.js.babyjub.js.executor": "Debug",
+    "Node.js.cryptohelpers.js.executor": "Run",
+    "Node.js.decryptit.js.executor": "Run",
+    "Node.js.election.js.executor": "Run",
+    "Node.js.index.js.executor": "Run",
+    "Node.js.parties.js.executor": "Run",
+    "Node.js.server.js.executor": "Run",
+    "Node.js.test.js.executor": "Run",
+    "Node.js.users.js.executor": "Run",
+    "Node.js.web3.js.executor": "Run",
+    "Notification.DisplayName-DoNotAsk-WindowsDefender": "Microsoft Defender may affect IDE",
+    "Notification.DoNotAsk-WindowsDefender": "true",
+    "Python tests.Python tests in test_merkle.py.executor": "Run",
+    "Python.GenPriv.executor": "Run",
+    "Python.MerkleTree.executor": "Run",
+    "Python.RegisterCitizens.executor": "Run",
+    "Python.__init__.executor": "Run",
+    "Python.poseidon.executor": "Run",
+    "ReactCreateComponentLastSelected": "arrowFunctionComponent",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "js.debugger.nextJs.config.created.client": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Jabir/WebstormProjects/Voting/frontend/public",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.back.executor": "Run",
+    "npm.dev (1).executor": "Run",
+    "npm.dev (2).executor": "Run",
+    "npm.dev.executor": "Run",
+    "npm.front.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Jabir\\WebstormProjects\\Voting\\backend\\node_modules\\prettier",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "ml.llm.LLMConfigurable",
+    "solidity.tutorial.shown.welcome": "true",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "C:\\Users\\Jabir\\AppData\\Roaming\\JetBrains\\IntelliJIdea2025.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -166,22 +753,23 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jabir\WebstormProjects\Voting\frontend\public" />
+      <recent name="C:\Users\Jabir\WebstormProjects\Voting\backend" />
       <recent name="C:\Users\Jabir\WebstormProjects\Voting\public" />
       <recent name="C:\Users\Jabir\WebstormProjects\Voting\PROOF" />
       <recent name="C:\Users\Jabir\WebstormProjects\Voting\utilities" />
-      <recent name="C:\Users\Jabir\WebstormProjects\Voting\ethereum\contracts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Jabir\WebstormProjects\Voting\public" />
-      <recent name="C:\Users\Jabir\WebstormProjects\Voting\merkletreeids" />
-      <recent name="C:\Users\Jabir\WebstormProjects\Voting\ethereum" />
-      <recent name="C:\Users\Jabir\WebstormProjects\Voting\ethereum\contracts" />
-      <recent name="C:\Users\Jabir\WebstormProjects\Voting\pages" />
+      <recent name="C:\Users\Jabir\WebstormProjects\Voting\frontend\src\app\verifyemail" />
+      <recent name="C:\Users\Jabir\WebstormProjects\Voting\frontend" />
+      <recent name="C:\Users\Jabir\WebstormProjects\Voting\frontend\src" />
+      <recent name="C:\Users\Jabir\WebstormProjects\Voting\frontend\utilities" />
+      <recent name="C:\Users\Jabir\WebstormProjects\Voting\backend" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
+  <component name="RunManager" selected="npm.back">
+    <configuration name="back" type="js.build_tools.npm" temporary="true">
+      <package-json value="$PROJECT_DIR$/backend/package.json" />
       <command value="run" />
       <scripts>
         <script value="dev" />
@@ -190,17 +778,31 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="front" type="js.build_tools.npm" temporary="true">
+      <package-json value="$PROJECT_DIR$/frontend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="npm.back" />
+      <item itemvalue="npm.front" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.back" />
+        <item itemvalue="npm.front" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409" />
-        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-IU-252.23892.409" />
+        <option value="bundled-js-predefined-d6986cc7102b-c7e53b3be11b-JavaScript-IU-253.28294.251" />
       </set>
     </attachedChunks>
   </component>
@@ -288,12 +890,44 @@
       <workItem from="1754741436142" duration="172000" />
       <workItem from="1754762818053" duration="5296000" />
       <workItem from="1754830680827" duration="7059000" />
-      <workItem from="1754847079840" duration="6203000" />
+      <workItem from="1754847079840" duration="8882000" />
+      <workItem from="1754897488722" duration="2903000" />
+      <workItem from="1754929265330" duration="8855000" />
+      <workItem from="1754938744195" duration="3519000" />
+      <workItem from="1755022779515" duration="8031000" />
+      <workItem from="1755167727119" duration="75000" />
+      <workItem from="1755282016521" duration="2638000" />
+      <workItem from="1755284899030" duration="3140000" />
+      <workItem from="1755368821477" duration="7462000" />
+      <workItem from="1755448497633" duration="1861000" />
+      <workItem from="1755450779167" duration="5833000" />
+      <workItem from="1755545821650" duration="2787000" />
+      <workItem from="1755620298762" duration="12880000" />
+      <workItem from="1755677430074" duration="3687000" />
+      <workItem from="1755697031120" duration="3628000" />
+      <workItem from="1755762855299" duration="1525000" />
+      <workItem from="1755793111574" duration="6250000" />
+      <workItem from="1755856962131" duration="80000" />
+      <workItem from="1755945326908" duration="401000" />
+      <workItem from="1757518103464" duration="3599000" />
+      <workItem from="1759336717853" duration="652000" />
+      <workItem from="1760187954784" duration="1167000" />
+      <workItem from="1763470650556" duration="491000" />
+      <workItem from="1764825164015" duration="876000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="javascript:npm:react" />
+    <option featureType="dependencySupport" implementationName="javascript:npm:prettier" />
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="javascript:npm:tailwindcss" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+    <option featureType="dependencySupport" implementationName="javascript:npm:next" />
+    <option featureType="dependencySupport" implementationName="javascript:npm:postcss" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -310,17 +944,16 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/components/VerifyPhone.jsx</url>
-          <line>151</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/components/VerifyPhone.jsx</url>
-          <line>74</line>
-          <option name="timeStamp" value="7" />
+          <url>file://$PROJECT_DIR$/frontend/src/app/signup/page.js</url>
+          <line>3</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Voting$poseidon.coverage" NAME="poseidon Coverage Results" MODIFIED="1752930294601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/merkletreeids" />
@@ -329,5 +962,13 @@
     <SUITE FILE_PATH="coverage/Voting$GenPriv.coverage" NAME="GenPriv Coverage Results" MODIFIED="1752326552153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/merkletreeids" />
     <SUITE FILE_PATH="coverage/Voting$MerkleTree.coverage" NAME="MerkleTree Coverage Results" MODIFIED="1752925000887" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/merkletreeids" />
     <SUITE FILE_PATH="coverage/Voting$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1751636412613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/merkletreeids" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>

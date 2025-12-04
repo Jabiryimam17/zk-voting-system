@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"],
+      "@components/*": ["./components/*"],
+      "@ethereum/*": ["./ethereum/*"],
+      "@utilities/*": ["./utilities/*"]
+    }
+  }
+}

@@ -1,1 +1,9 @@
 node_modules
+/frontend/utilities/circomlibjs/
+/frontend/PROOF/powersOfTau28_hez_final_17.ptau
+/backend/keys/
+/.idea/
+/ElectionProject/
+.env
+/backend/.env
+/frontend/.env

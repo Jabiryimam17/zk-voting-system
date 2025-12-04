@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@layer base {
+    :root {
+        /* Ethiopia palette */
+        --flag-green: #078930;
+        --flag-yellow: #fcd116;
+        --flag-red: #e81b23;
+
+        /* keep existing tokens but align accents */
+        --background: hsl(230 48% 7%);
+        --foreground: hsl(0 0% 100%);
+        --card: hsl(230 38% 12%);
+        --card-foreground: hsl(0 0% 98%);
+        --primary: var(--flag-green);
+        --primary-foreground: hsl(0 0% 100%);
+        --secondary: var(--flag-yellow);
+        --secondary-foreground: hsl(0 0% 15%);
+        --muted: hsl(230 32% 22%);
+        --muted-foreground: hsl(220 15% 85%);
+        --accent: var(--flag-red);
+        --accent-foreground: hsl(0 0% 100%);
+        --border: hsl(220 30% 30%);
+        --ring: var(--flag-yellow);
+        --radius: 0.75rem;
+    }
+
+    * {
+        border-color: var(--border);
+    }
+
+    body {
+        background-color: var(--background);
+        color: var(--foreground);
+        font-family: var(--font-geist-sans, ui-sans-serif, system-ui, sans-serif);
+    }
+}
+
+@layer components {
+    /* Smooth Ethiopia colors background (no grid lines) */
+    .colorful-surface {
+        position: relative;
+        isolation: isolate;
+
+        /* three wide color washes + deep base */
+        background-image:
+            radial-gradient(1200px 520px at -10% 0%,
+                color-mix(in oklab, var(--flag-green) 38%, transparent), transparent 60%),
+            radial-gradient(1200px 520px at 50% -20%,
+                color-mix(in oklab, var(--flag-yellow) 32%, transparent), transparent 65%),
+            radial-gradient(1300px 580px at 110% 10%,
+                color-mix(in oklab, var(--flag-red) 30%, transparent), transparent 62%),
+            linear-gradient(to bottom, hsl(230 48% 8%), hsl(230 48% 7%));
+        background-blend-mode: screen, screen, screen, normal;
+
+        /* ensure it covers whole app */
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 100vh;
+
+        /* force precedence over page-level rules */
+        background-color: var(--background) !important;
+        background-image:
+            radial-gradient(1200px 520px at -10% 0%,
+                color-mix(in oklab, var(--flag-green) 38%, transparent), transparent 60%),
+            radial-gradient(1200px 520px at 50% -20%,
+                color-mix(in oklab, var(--flag-yellow) 32%, transparent), transparent 65%),
+            radial-gradient(1300px 580px at 110% 10%,
+                color-mix(in oklab, var(--flag-red) 30%, transparent), transparent 62%),
+            linear-gradient(to bottom, hsl(230 48% 8%), hsl(230 48% 7%)) !important;
+    }
+
+    /* Add a broad soft yellow glow across the center band */
+    .colorful-surface::before {
+        content: "";
+        position: fixed;
+        inset: -20%;
+        margin: auto;
+        width: 120%;
+        height: 120%;
+        pointer-events: none;
+        z-index: -1;
+        background:
+                radial-gradient(60% 25% at 50% 35%,
+                color-mix(in oklab, var(--flag-yellow) 22%, transparent), transparent 70%);
+        filter: blur(60px);
+        opacity: 0.7;
+        mix-blend-mode: screen;
+    }
+
+    /* Header blobs re-tinted to match Ethiopia colors */
+    .blob {
+        position: absolute;
+        filter: blur(40px);
+        opacity: 0.5;
+        mix-blend-mode: screen;
+        transform: translateZ(0);
+    }
+    .blob-primary {
+        top: -140px; left: -120px;
+        width: 520px; height: 520px;
+        background: radial-gradient(closest-side,
+        color-mix(in oklab, var(--flag-green) 80%, transparent), transparent);
+    }
+    .blob-secondary {
+        top: -120px; right: -120px;
+        width: 460px; height: 460px;
+        background: radial-gradient(closest-side,
+        color-mix(in oklab, var(--flag-red) 78%, transparent), transparent);
+    }
+
+    .vignette {
+        position: absolute; inset: 0;
+        background: radial-gradient(120% 80% at 50% 0%, transparent 20%, rgba(0,0,0,0.32) 85%);
+        pointer-events: none;
+    }
+
+    /* existing controls (unchanged other than palette tokens) */
+    .form-label { display: block; color: color-mix(in oklab, white 92%, transparent); font-weight: 700; font-size: 0.9rem; margin-bottom: 0.4rem; }
+    .form-help { margin-top: 0.35rem; font-size: 0.85rem; color: color-mix(in oklab, white 75%, transparent); }
+    .input-icon { position: absolute; left: 0.75rem; top: 50%; transform: translateY(-50%); color: color-mix(in oklab, white 85%, transparent); pointer-events: none; }
+    .input-glass { width: 100%; border-radius: 14px; border: 1px solid color-mix(in oklab, var(--border) 80%, transparent); background: color-mix(in oklab, var(--card) 35%, transparent); color: white; padding: 0.75rem 0.9rem; outline: none; transition: border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease; }
+    .input-glass::placeholder { color: color-mix(in oklab, white 70%, transparent); }
+    .input-glass:focus { border-color: color-mix(in oklab, var(--primary) 70%, white 10%); background: color-mix(in oklab, var(--card) 45%, transparent); box-shadow: 0 0 0 3px color-mix(in oklab, var(--primary) 28%, transparent); }
+
+    .btn-gradient { display: inline-flex; align-items: center; justify-content: center; border-radius: 12px; padding: 0.75rem 1rem; font-weight: 700; color: white; background-image: linear-gradient(90deg, var(--flag-green), var(--flag-yellow), var(--flag-red)); transition: filter 160ms ease, transform 120ms ease; }
+    .btn-gradient:hover { filter: brightness(1.06); transform: translateY(-1px); }
+
+    .otp-input { width: 42px; height: 48px; text-align: center; font-weight: 700; font-size: 1.125rem; border-radius: 10px; color: white; border: 1px solid color-mix(in oklab, var(--border) 80%, transparent); background: color-mix(in oklab, var(--card) 40%, transparent); outline: none; transition: border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease; }
+    .otp-input:focus { border-color: color-mix(in oklab, var(--primary) 70%, white 10%); box-shadow: 0 0 0 3px color-mix(in oklab, var(--primary) 28%, transparent); background: color-mix(in oklab, var(--card) 50%, transparent); }
+
+    .glass-card { background-color: color-mix(in oklab, var(--card) 80%, transparent); border: 1px solid color-mix(in oklab, var(--border) 80%, transparent); backdrop-filter: blur(14px) saturate(120%); -webkit-backdrop-filter: blur(14px) saturate(120%); }
+    .gradient-border { background: linear-gradient(120deg, var(--flag-green), var(--flag-yellow), var(--flag-red)); }
+    .btn-link, .btn-link\/soft { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.45rem 0.9rem; border-radius: 9999px; font-weight: 600; transition: all 160ms ease; }
+    .btn-link { color: white; background: color-mix(in oklab, white 14%, transparent); }
+    .btn-link:hover { background: color-mix(in oklab, white 22%, transparent); transform: translateY(-1px); }
+    .btn-link\/soft { color: white; background: color-mix(in oklab, white 10%, transparent); }
+    .btn-link\/soft:hover { background: color-mix(in oklab, white 18%, transparent); transform: translateY(-1px); }
+    .gradient-chip { background: linear-gradient(120deg, color-mix(in oklab, var(--flag-green) 85%, transparent), color-mix(in oklab, var(--flag-yellow) 85%, transparent), color-mix(in oklab, var(--flag-red) 85%, transparent)); border: 1px solid color-mix(in oklab, white 25%, transparent); backdrop-filter: blur(6px); }
+}
