@@ -2,7 +2,6 @@
 
 Privacy‑preserving, national‑scale voting system leveraging zero‑knowledge proofs, modern cryptography, and blockchain oracles. Voters authenticate with a single password while proofs and cryptographic commitments protect privacy and integrity. The system integrates zk‑SNARKs (Circom/snarkjs), Poseidon/Merkle trees, and Chainlink for secure on‑chain/off‑chain interactions. Backend services manage election data, while a Next.js frontend delivers the user experience.
 
-> Important: This repository emphasizes the blockchain/zero‑knowledge layer because it is designed to demonstrate blockchain developer expertise.
 
 
 ## Features
@@ -56,11 +55,7 @@ Privacy‑preserving, national‑scale voting system leveraging zero‑knowledge
   - snarkjs (CLI) — already in frontend deps for in‑app usage
 
 
-## Environment Variables
 
-The project currently includes `.env` files at root, `backend/.env`, and `frontend/.env`.
-
-Security note: Values below appear in the repo during development. Move real secrets to a secure secret manager for production. Do not expose DB credentials or private keys in the frontend.
 
 Shared/root `.env` (used by tooling and/or frontend):
 ```
@@ -232,24 +227,6 @@ TODO:
 - Document gas considerations and batching strategies for large voter sets
 - Provide audit checklist and invariants (no double vote, liveness, censorship resistance)
 
-
-## Testing
-- Current status: No automated tests are configured.
-- TODO:
-  - Backend: add unit/integration tests (Jest/Supertest) for routes and DB
-  - Frontend: add component/e2e tests (Playwright/Cypress)
-  - ZK: add proof/verifier test vectors and CI checks
-  - Contracts: add Hardhat/Foundry tests once contracts are included
-
-
-## Project Status & Roadmap
-- Implemented: Basic API, party routes, frontend scaffolding, zk libraries and artifacts
-- In progress: End‑to‑end zk verification flow and Chainlink integration glue
-- Next steps (proposed):
-  - Extract/contracts repo with ABIs and deployments
-  - Secure secret management and remove sensitive values from frontend `.env`
-  - Add DB schema/migrations and seed scripts
-  - Add CI for lint/test/build and basic security checks
 
 
 ## License
