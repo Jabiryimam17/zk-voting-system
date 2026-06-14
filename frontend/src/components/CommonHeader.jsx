@@ -1,10 +1,12 @@
 // JavaScript (React / Next.js)
 "use client";
 
-import { election_host } from "../config";
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+
+const election_host =
+  process.env.NEXT_PUBLIC_ELECTION_HOST || "http://localhost:8080";
 
 export default function SiteHeader({
   title = "Election Dashboard",

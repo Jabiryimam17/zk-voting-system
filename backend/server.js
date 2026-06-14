@@ -12,7 +12,7 @@ const port = process.env.PORT || 5000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookie_parser());
-const frontend_host = "http://localhost:3000";
+const frontend_host = process.env.FRONTEND_HOST || "http://localhost:3000";
 
 app.use(
   cors({

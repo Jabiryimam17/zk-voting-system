@@ -1,6 +1,5 @@
 "use client";
 
-import { election_host, national_id_host } from "../../config";
 import { useState, useEffect } from "react";
 import election_contract from "@ethereum/election";
 import deploy_election from "@ethereum/election_deploy";
@@ -8,6 +7,11 @@ import deploy_verifier from "@ethereum/verifier_deploy";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import { jwtDecode as jwt_decode } from "jwt-decode";
+
+const election_host =
+  process.env.NEXT_PUBLIC_ELECTION_HOST || "http://localhost:8080";
+const national_id_host =
+  process.env.NEXT_PUBLIC_NATIONAL_ID_HOST || "http://localhost:5000";
 
 export default function Setup() {
   const router = useRouter();

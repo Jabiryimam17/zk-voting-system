@@ -8,7 +8,11 @@ import axios from "axios";
 import { useSearchParams } from "next/navigation";
 import cookies from "js-cookie";
 import { jwtDecode } from "jwt-decode";
-import { election_host, frontend_host } from "../../config";
+
+const election_host =
+  process.env.NEXT_PUBLIC_ELECTION_HOST || "http://localhost:8080";
+const frontend_host =
+  process.env.NEXT_PUBLIC_FRONTEND_HOST || "http://localhost:3000";
 
 const PartyProfile = () => {
   const [national_id, set_national_id] = useState("");

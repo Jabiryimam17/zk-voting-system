@@ -1,5 +1,7 @@
-import { national_id_host } from "../config.js";
 import express from "express";
+
+const national_id_host =
+  process.env.NATIONAL_ID_HOST || "http://localhost:5000";
 import election_db from "../database/CreateConnection.js";
 import axios from "axios";
 import { with_auth } from "../middlewares/auth.js";

@@ -3,13 +3,15 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { national_id_host } from "../config";
 import { Lock, IdCard, ShieldCheck, X } from "lucide-react";
 import axios from "axios";
 import { ethers, encodeBytes32String } from "ethers";
 import { election_contract } from "@ethereum/election.js";
 import decrypt from "@utilities/decryptit.js";
 import gen_proof from "@utilities/GenProof.js";
+
+const national_id_host =
+  process.env.NEXT_PUBLIC_NATIONAL_ID_HOST || "http://localhost:5000";
 
 async function fetch_user_data(id, password) {
   try {

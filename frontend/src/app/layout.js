@@ -1,6 +1,8 @@
 import "../output.css";
-import { election_host } from "../../config";
 import SiteHeader from "../components/CommonHeader"; // integrate the refactored header
+
+const election_host =
+  process.env.NEXT_PUBLIC_ELECTION_HOST || "http://localhost:8080";
 import { cookies } from "next/headers";
 import jwt from "jsonwebtoken";
 import { redirect } from "next/navigation";

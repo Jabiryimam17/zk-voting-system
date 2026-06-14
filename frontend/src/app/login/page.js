@@ -1,11 +1,13 @@
 "use client";
 
-import { election_host } from "../../config";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import { motion } from "framer-motion";
 import { Lock, Mail } from "lucide-react";
+
+const election_host =
+  process.env.NEXT_PUBLIC_ELECTION_HOST || "http://localhost:8080";
 
 export default function LoginPage() {
   const router = useRouter();

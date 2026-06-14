@@ -1,8 +1,10 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { election_host } from "../../config";
 import { useRouter } from "next/navigation";
+
+const election_host =
+  process.env.NEXT_PUBLIC_ELECTION_HOST || "http://localhost:8080";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Users,

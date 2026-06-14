@@ -17,9 +17,11 @@ import {
   CardContent,
   Tooltip,
 } from "@mui/material";
-import { election_host } from "../../config";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+
+const election_host =
+  process.env.NEXT_PUBLIC_ELECTION_HOST || "http://localhost:8080";
 
 import { encodeBytes32String } from "ethers";
 import { election_contract } from "@ethereum/election";

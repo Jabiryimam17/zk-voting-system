@@ -6,8 +6,10 @@ import { EmojiEvents } from "@mui/icons-material";
 import { election_contract } from "@ethereum/election.js";
 import { ethers } from "ethers";
 import { decodeBytes32String } from "ethers";
-import { election_host } from "../../config";
 import axios from "axios";
+
+const election_host =
+  process.env.NEXT_PUBLIC_ELECTION_HOST || "http://localhost:8080";
 import {
   Table,
   TableBody,

@@ -1,11 +1,13 @@
 "use client";
 
-import { election_host } from "../../config";
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { ShieldCheck, MailCheck, RefreshCw } from "lucide-react";
 import { useSearchParams, useRouter } from "next/navigation";
 import axios from "axios";
+
+const election_host =
+  process.env.NEXT_PUBLIC_ELECTION_HOST || "http://localhost:8080";
 
 export default function VerificationPage() {
   const router = useRouter();

@@ -1,11 +1,13 @@
 "use client";
 
-import { national_id_host } from "../../config";
 import { useState, useEffect } from "react";
 import { election_contract } from "@ethereum/election";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import { jwtDecode as jwt_decode } from "jwt-decode";
+
+const national_id_host =
+  process.env.NEXT_PUBLIC_NATIONAL_ID_HOST || "http://localhost:5000";
 
 export default function Manage() {
   const router = useRouter();
