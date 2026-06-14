@@ -17,11 +17,14 @@ async function fetch_user_data(id, password) {
     );
     const merkle_path = response.data["merkle_path"];
     const secrets = response.data["secret"];
+    if (!secrets) {
+      throw new Error("Secret data not found in response.");
+    }
     const decrypted_secret = await decrypt(
       secrets[1],
       password,
-      secrets[3],
-      secrets[2]
+      secrets[2],
+      secrets[3]
     );
     return { merkle_path, decrypted_secret };
   } catch (error) {
@@ -86,8 +89,7 @@ export default function VerificationPopup(props) {
     set_error_msg("");
     try {
       const { proof, publicSignals: public_signals } = await gen_proof(inputs);
-      console.log("Proof:", proof);
-      console.log("Public Signals:", public_signals);
+
       const a = [proof.pi_a[0], proof.pi_a[1]];
       const b = [
         [proof.pi_b[0][1], proof.pi_b[0][0]],
@@ -108,6 +110,7 @@ export default function VerificationPopup(props) {
         public_inputs_bn,
         encodeBytes32String(props.party_id)
       );
+
       await tx.wait();
 
       set_success(true);

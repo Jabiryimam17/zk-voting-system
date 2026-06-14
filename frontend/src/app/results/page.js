@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { EmojiEvents } from "@mui/icons-material";
 import { election_contract } from "@ethereum/election.js";
 import { ethers } from "ethers";
-import { toUtf8String, toUtf8Bytes } from "ethers/utils";
+import { decodeBytes32String } from "ethers";
 import axios from "axios";
 import {
   Table,
@@ -27,21 +27,24 @@ export default function ElectionStatus() {
         });
         const contract_instance = await election_contract();
         const api_parties = response.data.parties;
-        const parties_id = await contract_instance.fetch_parties();
-
-        if (api_parties.length !== parties_id.length) {
-          throw new Error("Invalid Configurations");
-        }
+        const contract_parties_id = await contract_instance.fetch_parties();
 
         const parties_map = new Map(api_parties.map((p) => [p["ID"], p]));
         const total_supporters = await contract_instance.total_participants();
         const full_parties = await Promise.all(
-          parties_id.map(async (party_id_bytes) => {
-            const party_id = toUtf8String(party_id_bytes).replace(/\0/g, "");
+          contract_parties_id.map(async (party_id_bytes) => {
+            let party_id;
+            try {
+              party_id = decodeBytes32String(party_id_bytes);
+            } catch (e) {
+              console.error("Error decoding party_id:", party_id_bytes, e);
+              party_id = party_id_bytes; // Fallback to raw if decoding fails
+            }
 
             const party = parties_map.get(party_id);
             if (!party) {
-              throw new Error("Missing Party");
+              console.warn("Missing Party for ID:", party_id);
+              return null;
             }
 
             const supporters_big_number = await contract_instance.parties(
@@ -66,11 +69,12 @@ export default function ElectionStatus() {
           })
         );
 
-        full_parties.sort(
-          (a, b) => parseInt(b.supporters) - parseInt(a.supporters)
-        );
+        full_parties.sort((a, b) => {
+          const diff = BigInt(b.supporters) - BigInt(a.supporters);
+          return diff > 0n ? 1 : diff < 0n ? -1 : 0;
+        });
 
-        set_parties(full_parties);
+        set_parties(full_parties.filter((p) => p !== null));
       } catch (error) {
         console.error("Error fetching data:", error);
       }

@@ -1,0 +1,14 @@
+   ▲ Next.js 15.4.6 (Turbopack)
+   - Local:        http://localhost:3005
+   - Network:      http://10.17.250.75:3005
+
+ ✓ Starting...
+already in use :::3005)
+    at new Promise (<anonymous>) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 3005
+}
+[?25h

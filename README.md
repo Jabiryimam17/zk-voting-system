@@ -1,6 +1,6 @@
 # ZK‑Powered National Voting System (Portfolio Demonstration)
 
-Privacy‑preserving, end‑to‑end cryptographic voting built with zk‑SNARKs, encrypted national‑ID data, and on‑chain verification. This repository showcases production‑grade blockchain, cryptography, and full‑stack skills across Solidity, Chainlink, Circom/snarkjs, Next.js, and Express/MySQL.
+Privacy‑preserving, end‑to‑end cryptographic voting built with zk‑SNARKs, encrypted national‑ID data, and on‑chain verification. This repository showcases production‑grade blockchain, cryptography, and full‑stack skills across Solidity, Chainlink, Circom/snarkjs, Next.js, and Express/PostgreSQL.
 
 ## 🔥 Developer Expertise Showcased
 
@@ -22,7 +22,7 @@ Privacy‑preserving, end‑to‑end cryptographic voting built with zk‑SNARKs
 
 🟠 Backend & Infrastructure
 - Express API (ESM), JWT sessions/cookies, CORS hardening
-- MySQL integration for elections, parties, users
+- PostgreSQL integration for elections, parties, users
 
 🔴 Frontend
 - Next.js 15 App Router, React 19, Tailwind CSS 4, Mantine/MUI
@@ -78,7 +78,7 @@ Client (Next.js)
 └──────────────┬──────────────────────┘
                │ proof only
                ▼
-Backend (Express + MySQL)
+Backend (Express + PostgreSQL)
 ┌─────────────────────────────────────┐
 │ Stores encrypted blobs, parties,    │
 │ auth, sessions                      │
@@ -98,7 +98,7 @@ Blockchain (Sepolia)
 - Frontend: Next.js 15, React 19, Tailwind 4, Mantine, MUI
 - ZK/Crypto: Circom 2.x, snarkjs, ffjavascript, poseidon‑lite
 - Blockchain: Solidity, Chainlink, ethers v6, Sepolia
-- Backend: Express 5 (ESM), MySQL2, JWT
+- Backend: Express 5 (ESM), pg (PostgreSQL), JWT
 
 
 ## Monorepo Structure
@@ -190,7 +190,7 @@ These variables connect the app to Sepolia contracts and the Chainlink oracle:
 - ELECTION_CONTRACT_ADDRESS — Deployed Voting contract address.
 - VERIFIER_ADDRESS — Deployed Verifier contract address.
 - RPC_URL / RPC_API_KEY / CHAIN_ID — Network provider configuration (Sepolia = 11155111).
-- DB_* — Backend MySQL connectivity.
+- DB_* — Backend PostgreSQL connectivity.
 - JWT_SECRET_KEY, APP_PASSWORD, EMAIL_SENDER — App security and notifications.
 
 

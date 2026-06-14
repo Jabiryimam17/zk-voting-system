@@ -2,8 +2,6 @@
 pragma solidity ^0.8.15;
 
 import "./Verifier.sol";
-import {Chainlink, ChainlinkClient } from "@chainlink/contracts/src/v0.8/operatorforwarder/ChainlinkClient.sol";
-import {ConfirmedOwner} from "@chainlink/contracts/src/v0.8/shared/access/ConfirmedOwner.sol";
 import {PartyManager} from "./PartyManager.sol";
 import {TreasureManager} from "./TreasureManager.sol";
 
@@ -13,17 +11,15 @@ contract Election is PartyManager, TreasureManager {
     Groth16Verifier public verifier;
     mapping(uint256=>bool) public nullifiers;
     bytes32 public merkle_root;
-    bool public is_merkle_root_set=false;
     uint32 public total_participants;
 
-    constructor(address verifier_address) payable {
+    constructor(address verifier_address, bytes32 _merkle_root) PartyManager() {
         verifier = Groth16Verifier(verifier_address);
+        merkle_root = _merkle_root;
     }
 
-    function set_merkle_root(bytes32 _merkle_root) public {
-        require(!is_merkle_root_set, "Merkle root already set");
-        merkle_root = _merkle_root;
-        is_merkle_root_set=true;
+    function set_merkle_root(bytes32 _merkle_root) public onlyOwner {
+        merkle_root=_merkle_root;
     }
 
     function vote(

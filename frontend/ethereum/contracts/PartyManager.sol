@@ -12,6 +12,7 @@ contract PartyManager is ChainlinkClient, ConfirmedOwner {
     mapping(bytes32 => string) internal pending_party;
     mapping (bytes32 => bytes32) internal pending_party_verification;
     mapping (bytes32 => Party) public parties; // key-> id_hash
+    bytes32[] public verified_parties;
     struct Party {
         uint32 supporters;
         bool verified;
@@ -21,23 +22,35 @@ contract PartyManager is ChainlinkClient, ConfirmedOwner {
         _setChainlinkToken(link_token);
         _setChainlinkOracle(oracle);
     }
-    function set_host(string memory new_host) public {
+    function set_host(string memory new_host) public onlyOwner {
         host = new_host;
     }
 
     function add_verified_party(bytes32 party_id) public onlyOwner {
         require(party_id.length > 0, "Invalid Party ID");
-        require(parties[party_id]==false, "Party already verified");
+        require(!parties[party_id].verified, "Party already verified");
         bytes32 request_id = verify_party(party_id);
         pending_party_verification[request_id] = party_id;
     }
 
-    function verify_party(bytes32 party_name, bytes32 id) public returns (bytes32) {
+    function toHexString(bytes32 data) internal pure returns (string memory) {
+        bytes memory alphabet = "0123456789abcdef";
+        bytes memory str = new bytes(66);
+        str[0] = "0";
+        str[1] = "x";
+        for (uint256 i = 0; i < 32; i++) {
+            str[i * 2 + 2] = alphabet[uint256(uint8(data[i] >> 4))];
+            str[i * 2 + 3] = alphabet[uint256(uint8(data[i] & 0x0f))];
+        }
+        return string(str);
+    }
+
+    function verify_party(bytes32 id) public returns (bytes32) {
         bytes32 job_id = "c1c5e92880894eb6b27d3cae19670aa3";
         Chainlink.Request memory req = _buildChainlinkRequest(
             job_id, address(this),this.fulfill_verification_party.selector
         );
-        string memory url = string.concat(host,"/is_party_exist?party_id=", id);
+        string memory url = string.concat(host,"/is_party_exist?party_id=", toHexString(id));
 
         req._add("get", url);
         req._add("path", "party_exist");
@@ -53,6 +66,10 @@ contract PartyManager is ChainlinkClient, ConfirmedOwner {
             supporters: 0,
             verified:true
         });
+        verified_parties.push(party_id);
         delete pending_party_verification[_request_id];
     }
-};
+    function fetch_parties() public view returns(bytes32[] memory) {
+        return verified_parties;
+    }
+}

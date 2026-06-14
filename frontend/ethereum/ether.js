@@ -1,5 +1,6 @@
 import { BrowserProvider, JsonRpcProvider } from "ethers";
-import "dotenv/config"; // Load .env
+import dotenv from "dotenv";
+dotenv.config({ path: "../../.env" });
 
 let ether;
 if (typeof window !== "undefined" && typeof window.ethereum !== "undefined") {
@@ -17,9 +18,9 @@ if (typeof window !== "undefined" && typeof window.ethereum !== "undefined") {
     console.error("User denied account access: ", error);
   }
 } else {
-  ether = new JsonRpcProvider(
-    "https://sepolia.infura.io/v3/1f1788bcd8d14c68a184f3590be5193b"
-  );
+  const api = process.env.RPC_URL;
+  console.log(api);
+  ether = new JsonRpcProvider(api);
   console.log("Ether initialized with Infura!");
 }
 

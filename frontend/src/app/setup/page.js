@@ -6,12 +6,10 @@ import deploy_election from "@ethereum/election_deploy";
 import deploy_verifier from "@ethereum/verifier_deploy";
 import { useRouter } from "next/navigation";
 import axios from "axios";
-import transfer_link from "@ethereum/transfer_token";
 import { jwtDecode as jwt_decode } from "jwt-decode";
 
 export default function Setup() {
   const router = useRouter();
-  const [amount, set_amount] = useState();
   const [status, set_status] = useState("");
   const [is_starting, set_is_starting] = useState(false);
   const [error_msg, set_error_msg] = useState("");
@@ -32,21 +30,13 @@ export default function Setup() {
       set_status("Deploying verifier...");
       const verifier_address = await deploy_verifier();
       set_status("Deploying election...");
-      const election_address = await deploy_election(verifier_address);
-
       set_status("Fetching Merkle root...");
       const response = await axios.get("http://localhost:5000/merkle_root");
       let merkle_root = response.data["merkle_root"];
       if (!merkle_root?.startsWith("0x")) merkle_root = "0x" + merkle_root;
-
-      set_status("Setting up contract...");
-      const election_contract_instance = election_contract(election_address);
-      const tx = await election_contract_instance.set_merkle_root(merkle_root);
-      await tx.wait();
-      await transfer_link(
-        "0x779877a7b0d9e8603169ddbd7836e478b4624789",
-        amount,
-        election_address
+      const election_address = await deploy_election(
+        verifier_address,
+        merkle_root
       );
 
       set_status("Saving addresses...");
@@ -87,37 +77,8 @@ export default function Setup() {
       <div className="w-full max-w-2xl text-center">
         <h1 className="title">Election Setup</h1>
         <p className="subtitle">
-          Deploy contracts, set the Merkle root, and launch your on-chain
-          election.
+          Deploy contracts and launch your on-chain election.
         </p>
-
-        {/* Amount input */}
-        <div className="mt-8 flex flex-col items-center gap-2">
-          <label htmlFor="amount" className="text-white/85 text-sm">
-            Amount (minimum 50)
-          </label>
-          <input
-            id="amount"
-            type="number"
-            min={50}
-            step={1}
-            value={amount}
-            onChange={(e) => set_amount(Number(e.target.value || 0))}
-            placeholder="Enter amount to fund the election"
-            className="w-full max-w-sm input-glass"
-            style={{
-              background: "rgba(255,255,255,0.08)",
-              border: "1px solid rgba(255,255,255,0.15)",
-              color: "#fff",
-              padding: "0.75rem 1rem",
-              borderRadius: "12px",
-              outline: "none",
-            }}
-          />
-          <p className="text-xs text-white/70">
-            This amount will be transferred when starting the election.
-          </p>
-        </div>
 
         <div className="mt-10" style={{ marginTop: "30px" }}>
           <button

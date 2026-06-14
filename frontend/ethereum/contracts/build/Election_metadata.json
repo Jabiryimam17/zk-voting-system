@@ -1,0 +1,565 @@
+{
+  "compiler": {
+    "version": "0.8.35+commit.47b9dedd"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "verifier_address",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "_merkle_root",
+            "type": "bytes32"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "bytes32",
+            "name": "id",
+            "type": "bytes32"
+          }
+        ],
+        "name": "ChainlinkCancelled",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "bytes32",
+            "name": "id",
+            "type": "bytes32"
+          }
+        ],
+        "name": "ChainlinkFulfilled",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "bytes32",
+            "name": "id",
+            "type": "bytes32"
+          }
+        ],
+        "name": "ChainlinkRequested",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          }
+        ],
+        "name": "OwnershipTransferRequested",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+      },
+      {
+        "inputs": [],
+        "name": "acceptOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "party_id",
+            "type": "bytes32"
+          }
+        ],
+        "name": "add_verified_party",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "_request_id",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bool",
+            "name": "party_exist",
+            "type": "bool"
+          }
+        ],
+        "name": "fulfill_verification_party",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "host",
+        "outputs": [
+          {
+            "internalType": "string",
+            "name": "",
+            "type": "string"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "link_token",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "merkle_root",
+        "outputs": [
+          {
+            "internalType": "bytes32",
+            "name": "",
+            "type": "bytes32"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "name": "nullifiers",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "oracle",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "",
+            "type": "bytes32"
+          }
+        ],
+        "name": "parties",
+        "outputs": [
+          {
+            "internalType": "uint32",
+            "name": "supporters",
+            "type": "uint32"
+          },
+          {
+            "internalType": "bool",
+            "name": "verified",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "string",
+            "name": "new_host",
+            "type": "string"
+          }
+        ],
+        "name": "set_host",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "_merkle_root",
+            "type": "bytes32"
+          }
+        ],
+        "name": "set_merkle_root",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "total_participants",
+        "outputs": [
+          {
+            "internalType": "uint32",
+            "name": "",
+            "type": "uint32"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "verifier",
+        "outputs": [
+          {
+            "internalType": "contract Groth16Verifier",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "party_name",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "id",
+            "type": "bytes32"
+          }
+        ],
+        "name": "verify_party",
+        "outputs": [
+          {
+            "internalType": "bytes32",
+            "name": "",
+            "type": "bytes32"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "nullifier",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256[2]",
+            "name": "a",
+            "type": "uint256[2]"
+          },
+          {
+            "internalType": "uint256[2][2]",
+            "name": "b",
+            "type": "uint256[2][2]"
+          },
+          {
+            "internalType": "uint256[2]",
+            "name": "c",
+            "type": "uint256[2]"
+          },
+          {
+            "internalType": "uint256[2]",
+            "name": "input",
+            "type": "uint256[2]"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "id_hash",
+            "type": "bytes32"
+          }
+        ],
+        "name": "vote",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "withdraw_link",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      }
+    ],
+    "devdoc": {
+      "kind": "dev",
+      "methods": {},
+      "version": 1
+    },
+    "userdoc": {
+      "kind": "user",
+      "methods": {
+        "acceptOwnership()": {
+          "notice": "Allows an ownership transfer to be completed by the recipient."
+        },
+        "owner()": {
+          "notice": "Get the current owner"
+        },
+        "transferOwnership(address)": {
+          "notice": "Allows an owner to begin transferring ownership to a new address."
+        }
+      },
+      "version": 1
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "Election.sol": "Election"
+    },
+    "evmVersion": "osaka",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": false,
+      "runs": 200
+    },
+    "remappings": []
+  },
+  "sources": {
+    "@chainlink/contracts/src/v0.8/operatorforwarder/Chainlink.sol": {
+      "keccak256": "0xd4d3b8d737718cbdc462eeb37702553b6b4c566d5308035dabe7e1adf7017130",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://79d39b1353a2404251c0841892f89e32e83d5919851f09016c3543d45d2f5a14",
+        "dweb:/ipfs/QmX4MLXcfWYYKop6pAMW4MM6t9Dc3bHKe5Y9BvLQi1Wimd"
+      ]
+    },
+    "@chainlink/contracts/src/v0.8/operatorforwarder/ChainlinkClient.sol": {
+      "keccak256": "0x0e8964392a88e00e8f188e8e66567df76bb5084357b7ccab8641664e90382cfa",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://dee7a0657b8ed58438ff3e748539a207df79b22e6997d34628b7b988460268f1",
+        "dweb:/ipfs/QmQYZYDPggUyYYvJxGEVXagya7LThrqc5zyrRGsjKscqPa"
+      ]
+    },
+    "@chainlink/contracts/src/v0.8/operatorforwarder/interfaces/ChainlinkRequestInterface.sol": {
+      "keccak256": "0xcb9cfd97e83ad76f0b9f38c31939faa40b9b49b17c8294efb7e01f0bc47641c5",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://04a41f7aec071113910291bcafe211431546f2e2049ee52218d193f1d30b242d",
+        "dweb:/ipfs/QmNhJbhLqXfuZi2hpQhEKYnmqiGqDJ4RGCTY2S41ovYT2u"
+      ]
+    },
+    "@chainlink/contracts/src/v0.8/operatorforwarder/interfaces/ENSInterface.sol": {
+      "keccak256": "0x9cfce3fe57c1b0b6192ab40d9e5a913349f2e8327136f0f9959cbbe47c03a97b",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://150b1e005445ac2e8aea39aa695a01863f08a47760814fdc7645c010bf4aa762",
+        "dweb:/ipfs/Qmcscbn8PBTTi1TK8qbvVvMSP2bhAbhbMurWe3EFBoWNPq"
+      ]
+    },
+    "@chainlink/contracts/src/v0.8/operatorforwarder/interfaces/OperatorInterface.sol": {
+      "keccak256": "0x436b333256f30b27d7a3ebc7ca0b4d614e2f18c280ca1eefc55e2cfef4aba230",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://3831375c4551888dbcb92eb0fee0a1888f311bab185a7e424046982c87705da6",
+        "dweb:/ipfs/QmRW5brp14c1MJehbpzrEZTKYWRt4Cpx3dsCpcWQyxsrhw"
+      ]
+    },
+    "@chainlink/contracts/src/v0.8/operatorforwarder/interfaces/OracleInterface.sol": {
+      "keccak256": "0xcbd2a3ae1098118beedcaedca5721ab9847c3a21e6482a71829e4ce8357b30b6",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://9d4a2109588d1b4c355e1622405f8760b0c164f2292a6cc2672c898472108989",
+        "dweb:/ipfs/QmbcfMMfQNaK5exe1bSkCRtJyiqjhLRVFK2itJfcWwsZsp"
+      ]
+    },
+    "@chainlink/contracts/src/v0.8/operatorforwarder/interfaces/PointerInterface.sol": {
+      "keccak256": "0x015785842b3c4902c97fbd091ed7c0cdf08126e64bd0a4bfe357edeb7e43a243",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://d9a1d29c67533cf21b7b8b17eb67d6f692169367658abf2273b7168ac3646e63",
+        "dweb:/ipfs/QmdHhDgiacNWjvNi8eqErbunVXL2mR2Stcof2uvefvZ7qE"
+      ]
+    },
+    "@chainlink/contracts/src/v0.8/shared/access/ConfirmedOwner.sol": {
+      "keccak256": "0xf73016e2473f54ab8d5c7e3c4ab2fa280a185ccfc80d2be48ac5d18016c3f717",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://f051e82857cc14b3a975f8c09eece2ca349d4954e83165a2b56ed659aad40c9e",
+        "dweb:/ipfs/QmRNMQ5jQQ3a9LZgsQqmQxYJxhTQKQrRtP4Wc7TAjYS43N"
+      ]
+    },
+    "@chainlink/contracts/src/v0.8/shared/access/ConfirmedOwnerWithProposal.sol": {
+      "keccak256": "0x521cf41e477e502d133e050a5f35625f2ec652327af7f1b21abf5b898f9b8df9",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://65198b68ed110b9900174be8b3ef682da28f7645fbaa21e4ccd97e8b4a971501",
+        "dweb:/ipfs/QmfDu99JhbBFnAFdw95jjnGgXEohyRvA7XPQf4NEpheytc"
+      ]
+    },
+    "@chainlink/contracts/src/v0.8/shared/interfaces/IOwnable.sol": {
+      "keccak256": "0x19f12817caa863b6785cf1e9085c66a93042fe906e41926bcb4a12bec9558d60",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://d1cf3f784c42642747c263cfa7b9462846d5ce8ff84467470ec2703a659b925d",
+        "dweb:/ipfs/Qmbz2qYFMNM3CVYNKgwJV5Kqx5FFHSrb8zXEsYbJXyjFnP"
+      ]
+    },
+    "@chainlink/contracts/src/v0.8/shared/interfaces/LinkTokenInterface.sol": {
+      "keccak256": "0xcee9303d524c29fefc346775ec0be31d134a5f14c990fe04961a9f516eb23ad5",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://f8b8e522c3aa8d22f0c6c6e2ed0b0aee2a224a961099205e4d847129abecd496",
+        "dweb:/ipfs/QmRsTaN1CFJADHtBNsE9kJT8F4P8qVSggGHh3iXL5dDcmc"
+      ]
+    },
+    "@chainlink/contracts/src/v0.8/vendor/BufferChainlink.sol": {
+      "keccak256": "0x89388a631c16ad993e4d76d8d19e08ae98e1397f5dfdfb5f9c0b91015df4cf5d",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://88cb96caa94128821daec5478c0f3646902007b81a0604b2e3ab79ea2f40b056",
+        "dweb:/ipfs/Qmd1nu9CpgouPmukNQpZThxKgPZAayXxqBfwbDVHfMrCrF"
+      ]
+    },
+    "@chainlink/contracts/src/v0.8/vendor/CBORChainlink.sol": {
+      "keccak256": "0x08bda450d4dc1d17147fd29810234d35e2c437f1a99be733cfa7ee516db08a48",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://d47a793b314afe9cd82fcf05ffe4ebbfa5504c2decc83004edbb3b2069d4f0c3",
+        "dweb:/ipfs/Qmd2YLSiS8xeeXqireh6qJgTTwVY2VscZpv2cQBU8gkEJT"
+      ]
+    },
+    "@chainlink/contracts/src/v0.8/vendor/ENSResolver.sol": {
+      "keccak256": "0x606bda5f3fa27be4cf04f6636dda443b7787b56e87ade988fca2e51d2147613d",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://63b50d13ca97c4dd62738398bb2e423a36563b827b0af94c0e7a47cf0d4a2e6b",
+        "dweb:/ipfs/QmXjy7BmtnPeCLMaMnGGnsxDPGxohfDpYzP8PnUoh6gBGa"
+      ]
+    },
+    "Election.sol": {
+      "keccak256": "0x29e8c6bb894f838344201b871a66052eb7f84db28bef91655d7614a7dd590dec",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://8a75d4372811a91db58157cacfa93e6a5e4dd8394e395ad53f759e0887761fc7",
+        "dweb:/ipfs/QmcaE1oe4rtYog1N3ksnX978QYwCLqmfLSrbD1FHMtpaFD"
+      ]
+    },
+    "PartyManager.sol": {
+      "keccak256": "0xf5ed3fa03e2db3b20db8a68ba48a27c2626b52567bd577e0aa4b597a74df99ce",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://ec502151093b93c225897ddfed22285d2d652b54341588905a55c5281ca0f6b2",
+        "dweb:/ipfs/QmeSMqMUxjMjH4JAP5vZngJkVXuuJ6ResN2kk9Zkj2quy7"
+      ]
+    },
+    "TreasureManager.sol": {
+      "keccak256": "0xf93f479af89194e1aea8cc2bff587241fdc0939f840096cbe86cdc258b7c06b8",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://8018e43196cce102fb0ca0c7b2d5d9f08bfc0dd1a0475297e90bffab93ea2d6a",
+        "dweb:/ipfs/QmNies7Vn53SB6FjwrttKmEsGgF14t8DPY4HDncr94RLHN"
+      ]
+    },
+    "Verifier.sol": {
+      "keccak256": "0x497ba97f8430a896a3656e3caebbe6d846703aa2ba44425a0152fcdd0851261f",
+      "license": "GPL-3.0",
+      "urls": [
+        "bzz-raw://5525748a69f981b69baafad01f2ff866838ad8147934bfddf14089bf1c94bc1a",
+        "dweb:/ipfs/QmdoqmUiMFREzNBnGQLSUfLFWMTjAUDnd72J4x4QQfd5t6"
+      ]
+    }
+  },
+  "version": 1
+}

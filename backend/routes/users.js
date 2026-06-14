@@ -20,10 +20,11 @@ const __dirname = path.dirname(__filename);
 // const nanoid = customAlphabet("1234567890", 6);
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
-  const [[user]] = await election_db.execute(
-    "SELECT * FROM users WHERE email = ? AND password=? AND verified=?",
+  const result = await election_db.query(
+    "SELECT * FROM users WHERE email = $1 AND password=$2 AND verified=$3",
     [email, password, true],
   );
+  const user = result.rows[0];
   if (user) {
     const token = generate_token({
       email: email,
@@ -31,11 +32,11 @@ router.post("/login", async (req, res) => {
       admin: user["admin"] || false,
     });
     set_token_cookie(res, token);
-    res.status(200).json({
+    return res.status(200).json({
       message: "You have successfully logged in",
     });
   } else {
-    res.status(403).json({
+    return res.status(403).json({
       message: "You are unauthorized",
     });
   }
@@ -44,14 +45,14 @@ router.post("/login", async (req, res) => {
 router.post("/register", async (req, res) => {
   const { first_name, last_name, email, password, national_id } = req.body;
 
-  const [user] = await election_db.execute(
-    "SELECT * FROM users WHERE email = ?",
+  const result = await election_db.query(
+    "SELECT * FROM users WHERE email = $1",
     [email],
   );
+  const user = result.rows;
   if (user.length > 0) {
     return res.status(400).json({ message: "You have already registered" });
   }
-  console.log(req.body);
   const match_response = await axios({
     method: "POST",
     data: { national_id: national_id, email: email },
@@ -65,34 +66,37 @@ router.post("/register", async (req, res) => {
     const code = nanoid(6);
     const expiry_time = new Date(Date.now() + 5 * 60 * 1000);
     await election_db.query(
-      "INSERT INTO users (first_name, last_name, email, password, national_id, verification_code, expiry_date) VALUES (?, ?, ?, ?, ?, ?, ?)",
+      "INSERT INTO users (first_name, last_name, email, password, national_id, verification_code, expiry_date) VALUES ($1, $2, $3, $4, $5, $6, $7)",
       [first_name, last_name, email, password, national_id, code, expiry_time],
     );
     send_email(email, "Email Verification", format_email_message(code)).catch(
       console.error,
     );
-    res.status(200).json({
+    return res.status(200).json({
       message: "National ID and email match.Now check your email",
       is_match: true,
     });
   } else {
-    res.status(403).json({ message: "National ID and email don't match" });
+    return res
+      .status(403)
+      .json({ message: "National ID and email don't match" });
   }
 });
 
 router.patch("/resend_code", async (req, res) => {
   const { email } = req.body;
   const decoded_email = decodeURIComponent(email.replace("%20", "+"));
-  const [user] = await election_db.execute(
-    "SELECT * FROM users WHERE email = ?",
+  const result = await election_db.query(
+    "SELECT * FROM users WHERE email = $1",
     [decoded_email],
   );
+  const user = result.rows;
 
   if (user.length > 0) {
     const code = nanoid(6);
     const expiry_time = new Date(Date.now() + 5 * 60 * 1000);
     await election_db.query(
-      "UPDATE users SET verification_code = ?, expiry_date = ? WHERE email = ?",
+      "UPDATE users SET verification_code = $1, expiry_date = $2 WHERE email = $3",
       [code, expiry_time, decoded_email],
     );
     send_email(
@@ -100,12 +104,12 @@ router.patch("/resend_code", async (req, res) => {
       "Email Verification",
       format_email_message(code),
     ).catch(console.error);
-    res.status(200).json({
+    return res.status(200).json({
       message: "Verification code resent successfully",
       success: true,
     });
   } else {
-    res.status(404).json({ message: "User not found" });
+    return res.status(404).json({ message: "User not found" });
   }
 });
 
@@ -113,22 +117,22 @@ router.post("/verify_email", async (req, res) => {
   const { email, code } = req.body;
   const decoded_email = decodeURIComponent(email.replace("%20", "+"));
   const date = new Date(Date.now());
-  const [user] = await election_db.query(
-    "SELECT * FROM users WHERE email = ? AND verification_code = ? AND expiry_date > ?",
+  const result = await election_db.query(
+    "SELECT * FROM users WHERE email = $1 AND verification_code = $2 AND expiry_date > $3",
     [decoded_email, code, date],
   );
-  console.log(user);
+  const user = result.rows;
 
   if (user.length > 0) {
     await election_db.query(
-      "UPDATE users SET verified = true WHERE email = ?",
+      "UPDATE users SET verified = true WHERE email = $1",
       [decoded_email],
     );
-    res
+    return res
       .status(200)
       .json({ message: "Email verified successfully", is_valid: true });
   } else {
-    res.status(403).json({
+    return res.status(403).json({
       message: "Invalid verification code or Invalid email",
       is_valid: false,
     });
@@ -137,7 +141,7 @@ router.post("/verify_email", async (req, res) => {
 
 router.post("/logout", with_auth, async (req, res) => {
   remove_token_cookie(res);
-  res.status(200).json({ message: "You have successfully logged out" });
+  return res.status(200).json({ message: "You have successfully logged out" });
 });
 
 const filePath = path.join(__dirname, "..", "utilities", "address.json");
@@ -153,7 +157,7 @@ router.post("/contract_address", with_auth, async (req, res) => {
     const file_content = fs.readFileSync(filePath, "utf-8");
     const contents = JSON.parse(file_content);
     if (contents["merkle setup"])
-      res.status(400).json({ message: "Address already set" });
+      return res.status(400).json({ message: "Address already set" });
     fs.writeFileSync(
       filePath,
       JSON.stringify(
@@ -168,11 +172,11 @@ router.post("/contract_address", with_auth, async (req, res) => {
       "utf-8",
     );
 
-    res.status(200).json({
+    return res.status(200).json({
       message: "Contract address updated successfully",
     });
   } catch (err) {
-    res
+    return res
       .status(500)
       .json({ message: "Error writing address", error: err.message });
   }
@@ -180,17 +184,16 @@ router.post("/contract_address", with_auth, async (req, res) => {
 
 router.get("/contract_address", (req, res) => {
   try {
-    console.log("I am being asked");
     const file_content = fs.readFileSync(filePath, "utf-8");
     const addresses = JSON.parse(file_content);
     const address = addresses["election address"];
 
-    res.status(200).json({
+    return res.status(200).json({
       message: "Contract address fetched successfully",
       address,
     });
   } catch (err) {
-    res
+    return res
       .status(500)
       .json({ message: "Error reading address", error: err.message });
   }

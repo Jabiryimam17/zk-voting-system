@@ -2,6 +2,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import VerifyPhone from "../../components/VerifyPhone";
+import { election_contract } from "@ethereum/election";
+import { encodeBytes32String } from "ethers";
 import axios from "axios";
 import { useSearchParams } from "next/navigation";
 import cookies from "js-cookie";
@@ -30,6 +32,7 @@ const PartyProfile = () => {
     party_name: "",
     party_symbol: "http://localhost:3000/images/download.png",
     party_shortname: "",
+    supporters: "0",
   });
 
   useEffect(() => {
@@ -63,6 +66,22 @@ const PartyProfile = () => {
           const payload = response.data?.party;
           const partyData = Array.isArray(payload) ? payload[0] : payload;
 
+          // Fetch supporters from contract
+          let supporters = "0";
+          try {
+            const contract_instance = await election_contract();
+            const party_id_bytes = encodeBytes32String(id);
+            const contract_party = await contract_instance.parties(
+              party_id_bytes
+            );
+            supporters = contract_party.supporters.toString();
+          } catch (contractError) {
+            console.error(
+              "Error fetching supporters from contract:",
+              contractError
+            );
+          }
+
           // Normalize goals: array or comma-separated string -> array
           let goals = partyData?.party_goals ?? [];
           if (typeof goals === "string") {
@@ -83,6 +102,7 @@ const PartyProfile = () => {
               "http://localhost:3000/images/download.png",
             party_shortname:
               partyData?.short_name || partyData?.party_shortname || "",
+            supporters: supporters,
           });
         } else {
           console.error("Failed to fetch party data");
@@ -136,14 +156,25 @@ const PartyProfile = () => {
                   <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight bg-gradient-to-r from-primary-200 via-white to-secondary-200 bg-clip-text text-transparent">
                     {party["party_name"] || "Party"}
                   </h1>
-                  <div className="mt-2 inline-flex items-center gap-2 text-white/90">
-                    <User size={16} />
-                    <span className="text-sm">
-                      Party Leader:{" "}
-                      <span className="font-semibold">
-                        {party["party_leader_name"] || "—"}
+                  <div className="mt-2 inline-flex flex-wrap items-center gap-4 text-white/90">
+                    <div className="inline-flex items-center gap-2">
+                      <User size={16} />
+                      <span className="text-sm">
+                        Party Leader:{" "}
+                        <span className="font-semibold">
+                          {party["party_leader_name"] || "—"}
+                        </span>
                       </span>
-                    </span>
+                    </div>
+                    <div className="inline-flex items-center gap-2">
+                      <CheckCircle2 size={16} className="text-primary-400" />
+                      <span className="text-sm">
+                        Supporters:{" "}
+                        <span className="font-semibold text-primary-200">
+                          {party["supporters"] || "0"}
+                        </span>
+                      </span>
+                    </div>
                   </div>
                   {party["party_shortname"] && (
                     <div className="mt-2">

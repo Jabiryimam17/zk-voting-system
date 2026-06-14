@@ -92,10 +92,7 @@ export default function RegisterForm() {
           const contract_instance = await election_contract();
           const party_id_string = response.data["party_id"];
           const party_id_bytes = encodeBytes32String(party_id_string);
-          const tx = await contract_instance.add_verified_party(
-            party_id_bytes,
-            party_id_string
-          );
+          const tx = await contract_instance.add_verified_party(party_id_bytes);
           await tx.wait();
           router.push(`/party?id=${party_id_string}`);
         } catch (error) {
