@@ -1,3 +1,4 @@
+import { national_id_host } from "../config.js";
 import express from "express";
 import election_db from "../database/CreateConnection.js";
 import axios from "axios";
@@ -50,7 +51,7 @@ router.post("/", async (req, res) => {
           party_name: party_name,
           party_leader_name: party_leader_name,
         },
-        url: "http://localhost:5000/verify_party",
+        url: `${national_id_host}/verify_party`,
         headers: {
           "Content-Type": "application/json",
         },

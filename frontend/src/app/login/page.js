@@ -1,5 +1,6 @@
 "use client";
 
+import { election_host } from "../../config";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
@@ -20,7 +21,7 @@ export default function LoginPage() {
     set_unauthorized(false);
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/users/login",
+        `${election_host}/api/users/login`,
         { email, password },
         { withCredentials: true }
       );

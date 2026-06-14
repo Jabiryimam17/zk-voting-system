@@ -5,61 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bff0f43c-f2de-4352-a79a-8b4840aae26f" name="Changes" comment="">
-      <change beforePath="$USER_HOME$/PycharmProjects/id-registrations/.idea/NationalIDSystem.iml" beforeDir="false" afterPath="$USER_HOME$/PycharmProjects/id-registrations/.idea/NationalIDSystem.iml" afterDir="false" />
-      <change beforePath="$USER_HOME$/PycharmProjects/id-registrations/.idea/dataSources.xml" beforeDir="false" afterPath="$USER_HOME$/PycharmProjects/id-registrations/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/PycharmProjects/id-registrations/.idea/misc.xml" beforeDir="false" afterPath="$USER_HOME$/PycharmProjects/id-registrations/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/PycharmProjects/id-registrations/.idea/sqldialects.xml" beforeDir="false" afterPath="$USER_HOME$/PycharmProjects/id-registrations/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/PycharmProjects/id-registrations/MYSQL_connections.py" beforeDir="false" />
+      <change afterPath="$USER_HOME$/PycharmProjects/id-registrations/frontend/.env" afterDir="false" />
+      <change afterPath="$USER_HOME$/PycharmProjects/id-registrations/frontend/src/config.js" afterDir="false" />
       <change beforePath="$USER_HOME$/PycharmProjects/id-registrations/README.md" beforeDir="false" afterPath="$USER_HOME$/PycharmProjects/id-registrations/README.md" afterDir="false" />
-      <change beforePath="$USER_HOME$/PycharmProjects/id-registrations/ids_tree/000080.log" beforeDir="false" />
-      <change beforePath="$USER_HOME$/PycharmProjects/id-registrations/ids_tree/000081.ldb" beforeDir="false" />
-      <change beforePath="$USER_HOME$/PycharmProjects/id-registrations/ids_tree/CURRENT" beforeDir="false" afterPath="$USER_HOME$/PycharmProjects/id-registrations/ids_tree/CURRENT" afterDir="false" />
-      <change beforePath="$USER_HOME$/PycharmProjects/id-registrations/ids_tree/LOG" beforeDir="false" afterPath="$USER_HOME$/PycharmProjects/id-registrations/ids_tree/LOG" afterDir="false" />
-      <change beforePath="$USER_HOME$/PycharmProjects/id-registrations/ids_tree/LOG.old" beforeDir="false" afterPath="$USER_HOME$/PycharmProjects/id-registrations/ids_tree/LOG.old" afterDir="false" />
-      <change beforePath="$USER_HOME$/PycharmProjects/id-registrations/ids_tree/MANIFEST-000079" beforeDir="false" />
-      <change beforePath="$USER_HOME$/PycharmProjects/id-registrations/merkletreeids/GenSign.js" beforeDir="false" afterPath="$USER_HOME$/PycharmProjects/id-registrations/merkletreeids/GenSign.js" afterDir="false" />
-      <change beforePath="$USER_HOME$/PycharmProjects/id-registrations/merkletreeids/MerkleTree.py" beforeDir="false" afterPath="$USER_HOME$/PycharmProjects/id-registrations/merkletreeids/MerkleTree.py" afterDir="false" />
-      <change beforePath="$USER_HOME$/PycharmProjects/id-registrations/merkletreeids/RegisterCitizens.py" beforeDir="false" afterPath="$USER_HOME$/PycharmProjects/id-registrations/merkletreeids/RegisterCitizens.py" afterDir="false" />
-      <change beforePath="$USER_HOME$/PycharmProjects/id-registrations/merkletreeids/helper/IntBuffConv.js" beforeDir="false" afterPath="$USER_HOME$/PycharmProjects/id-registrations/merkletreeids/helper/IntBuffConv.js" afterDir="false" />
-      <change beforePath="$USER_HOME$/PycharmProjects/id-registrations/merkletreeids/package-lock.json" beforeDir="false" afterPath="$USER_HOME$/PycharmProjects/id-registrations/merkletreeids/package-lock.json" afterDir="false" />
-      <change beforePath="$USER_HOME$/PycharmProjects/id-registrations/merkletreeids/package.json" beforeDir="false" afterPath="$USER_HOME$/PycharmProjects/id-registrations/merkletreeids/package.json" afterDir="false" />
-      <change beforePath="$USER_HOME$/PycharmProjects/id-registrations/routes.py" beforeDir="false" afterPath="$USER_HOME$/PycharmProjects/id-registrations/routes.py" afterDir="false" />
+      <change beforePath="$USER_HOME$/PycharmProjects/id-registrations/frontend/src/app/add-party/page.js" beforeDir="false" afterPath="$USER_HOME$/PycharmProjects/id-registrations/frontend/src/app/add-party/page.js" afterDir="false" />
+      <change beforePath="$USER_HOME$/PycharmProjects/id-registrations/frontend/src/app/register/page.js" beforeDir="false" afterPath="$USER_HOME$/PycharmProjects/id-registrations/frontend/src/app/register/page.js" afterDir="false" />
+      <change beforePath="$USER_HOME$/PycharmProjects/id-registrations/frontend/src/app/verify/page.js" beforeDir="false" afterPath="$USER_HOME$/PycharmProjects/id-registrations/frontend/src/app/verify/page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Voting.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Voting.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/data_source_mapping.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/database/CreateConnection.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/database/CreateConnection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/routes/parties.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/parties.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/utilities/address.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utilities/address.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/PROOF/VerifyVoter_js/generate_witness.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/VerifyVoter_js/generate_witness.cjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/PROOF/VerifyVoter_js/witness_calculator.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/PROOF/VerifyVoter_js/witness_calculator.cjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/ethereum/contracts/Election.sol" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/ethereum/contracts/Election.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/ethereum/contracts/PartyManager.sol" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/ethereum/contracts/PartyManager.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/ethereum/contracts/TreasureManager.sol" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/ethereum/contracts/TreasureManager.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/ethereum/contracts/build/election_cont.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/ethereum/contracts/build/election_cont.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/ethereum/contracts/build/verifier_cont.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/ethereum/contracts/build/verifier_cont.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/ethereum/election_deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/ethereum/election_deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/ethereum/ether.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/ethereum/ether.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/ethereum/transfer_token.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/ethereum/transfer_token.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/ethereum/verifier_deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/ethereum/verifier_deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/VerifyVoter_js/generate_witness.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/VerifyVoter_js/generate_witness.cjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/VerifyVoter_js/witness_calculator.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/VerifyVoter_js/witness_calculator.cjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/ethereum/election.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/ethereum/election.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/login/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/login/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/manage/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/manage/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/parties/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/parties/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/party/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/party/page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/registerparty/partyform.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/registerparty/partyform.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/results/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/results/page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/setup/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/setup/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/signup/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/signup/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/verifyemail/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/verifyemail/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/CommonHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CommonHeader.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/VerifyPhone.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/VerifyPhone.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/utilities/decryptit.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utilities/decryptit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +43,7 @@
     </persistenceIdMap>
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="264" />
+    <option name="cachedIndexableFilesCount" value="261" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -125,61 +96,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000000000087734" />
-      <entry key="MS500" value="1.00614973760827" />
-      <entry key="S2" value="1.3485678007133872" />
-      <entry key="S5" value="2.2582566525311085" />
-      <entry key="S10" value="3.5888513223199787" />
-      <entry key="S30" value="6.567194045120334" />
-      <entry key="S60" value="8.304598303834842" />
-      <entry key="M2" value="10.223934294202087" />
-      <entry key="M5" value="18.601217862953497" />
-      <entry key="M10" value="33.39369142605591" />
-      <entry key="M15" value="45.43749425471935" />
-      <entry key="M30" value="73.19097224054518" />
-      <entry key="H1" value="123.12578108089527" />
-      <entry key="H2" value="211.18959497596933" />
-      <entry key="H4" value="317.5557662063417" />
-      <entry key="D1" value="487.7958316017621" />
-      <entry key="W1" value="529.5668496258163" />
+      <entry key="MS100" value="2.0418552120494304" />
+      <entry key="MS500" value="3.980197130298835" />
+      <entry key="S2" value="8.112321295929956" />
+      <entry key="S5" value="16.829679440781597" />
+      <entry key="S10" value="26.415286683958303" />
+      <entry key="S30" value="41.058836695305544" />
+      <entry key="S60" value="52.25931757149503" />
+      <entry key="M2" value="72.7158001889181" />
+      <entry key="M5" value="113.57026913996086" />
+      <entry key="M10" value="145.47616188298034" />
+      <entry key="M15" value="165.2443134954734" />
+      <entry key="M30" value="204.95496829457497" />
+      <entry key="H1" value="263.27171003776084" />
+      <entry key="H2" value="357.60216198323235" />
+      <entry key="H4" value="472.23584401920056" />
+      <entry key="D1" value="660.567691958532" />
+      <entry key="W1" value="707.6001345483874" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="9.235213096410421E-95" />
-      <entry key="S5" value="3.350237307307913E-38" />
-      <entry key="S10" value="2.540910982996215E-19" />
-      <entry key="S30" value="1.0560191414927394E-6" />
-      <entry key="S60" value="0.0016491503721620991" />
-      <entry key="M2" value="0.06922963002477994" />
-      <entry key="M5" value="0.8089034038340207" />
-      <entry key="M10" value="2.4349164348067114" />
-      <entry key="M15" value="3.9214812424449073" />
-      <entry key="M30" value="7.163188382477902" />
-      <entry key="H1" value="10.590370896150281" />
-      <entry key="H2" value="13.678111213074075" />
-      <entry key="H4" value="16.310375015409353" />
-      <entry key="D1" value="19.97903132957367" />
-      <entry key="W1" value="20.84628887618545" />
+      <entry key="MS500" value="2.065698501588965E-66" />
+      <entry key="S2" value="5.771123277002539E-17" />
+      <entry key="S5" value="4.79490673707759E-7" />
+      <entry key="S10" value="9.776163370484668E-4" />
+      <entry key="S30" value="0.15809199171996505" />
+      <entry key="S60" value="0.585792083560052" />
+      <entry key="M2" value="1.2162525352649054" />
+      <entry key="M5" value="2.052068856739455" />
+      <entry key="M10" value="2.8740979467274546" />
+      <entry key="M15" value="3.8384514025710548" />
+      <entry key="M30" value="6.795932102399648" />
+      <entry key="H1" value="10.80717539750628" />
+      <entry key="H2" value="14.768886437644085" />
+      <entry key="H4" value="18.136458264556257" />
+      <entry key="D1" value="22.733135745493588" />
+      <entry key="W1" value="23.80947447826406" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="9.711139025755559E-5" />
-      <entry key="MS500" value="0.1625493504117845" />
-      <entry key="S2" value="0.9442858960246562" />
-      <entry key="S5" value="1.9962364631620528" />
-      <entry key="S10" value="3.3792215297138113" />
-      <entry key="S30" value="6.424809935142368" />
-      <entry key="S60" value="8.210283314712338" />
-      <entry key="M2" value="10.231000302309463" />
-      <entry key="M5" value="19.359818479058436" />
-      <entry key="M10" value="35.780543341376756" />
-      <entry key="M15" value="49.31442775834855" />
-      <entry key="M30" value="80.31835609176292" />
-      <entry key="H1" value="133.69019112991347" />
-      <entry key="H2" value="224.85052821687069" />
-      <entry key="H4" value="333.85568111058444" />
-      <entry key="D1" value="507.7726963568377" />
-      <entry key="W1" value="550.4128151257577" />
+      <entry key="MS100" value="1.7492116205901673" />
+      <entry key="MS500" value="3.787309025137114" />
+      <entry key="S2" value="8.013060907778812" />
+      <entry key="S5" value="16.759139949789343" />
+      <entry key="S10" value="26.363859665612935" />
+      <entry key="S30" value="41.18628929736617" />
+      <entry key="S60" value="52.8203725141671" />
+      <entry key="M2" value="73.91121397944465" />
+      <entry key="M5" value="115.6062541442535" />
+      <entry key="M10" value="148.33249000256018" />
+      <entry key="M15" value="169.06198233505913" />
+      <entry key="M30" value="211.72709454077278" />
+      <entry key="H1" value="274.0574736020844" />
+      <entry key="H2" value="372.3551634082564" />
+      <entry key="H4" value="490.36205110201496" />
+      <entry key="D1" value="683.2985984103582" />
+      <entry key="W1" value="731.4092734843535" />
     </decayedShown>
   </component>
   <component name="PackageJsonUpdateNotifier">
@@ -492,7 +463,7 @@
       <workItem from="1781367881167" duration="4325000" />
       <workItem from="1781414985786" duration="3092000" />
       <workItem from="1781420450803" duration="3778000" />
-      <workItem from="1781430623450" duration="2529000" />
+      <workItem from="1781430623450" duration="5186000" />
     </task>
     <servers />
   </component>

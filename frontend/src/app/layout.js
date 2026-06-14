@@ -1,4 +1,5 @@
 import "../output.css";
+import { election_host } from "../../config";
 import SiteHeader from "../components/CommonHeader"; // integrate the refactored header
 import { cookies } from "next/headers";
 import jwt from "jsonwebtoken";
@@ -12,7 +13,7 @@ export default async function RootLayout({ children }) {
     const decoded_token = jwt.decode(token);
     if (decoded_token.exp < Date.now() / 1000) {
       is_authenticated = false;
-      await fetch("http://localhost:8080/api/users/logout", {
+      await fetch(`${election_host}/api/users/logout`, {
         withCredentials: true,
       });
       redirect("/");

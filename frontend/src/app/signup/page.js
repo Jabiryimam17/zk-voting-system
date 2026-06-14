@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { UserPlus, Mail, KeyRound, IdCard } from "lucide-react";
+import { election_host } from "../../config";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 
@@ -37,7 +38,7 @@ export default function RegisterPage() {
         national_id: form.nationalId,
       };
       const res = await axios.post(
-        "http://localhost:8080/api/users/register",
+        `${election_host}/api/users/register`,
         payload
       );
       if (res.data?.is_match) {

@@ -129,7 +129,7 @@ This repository includes two Solidity helper contracts used in the system flow. 
 - Purpose: Integrates with a Chainlink oracle to verify that a political party exists/is eligible according to an off‑chain registry (served by the backend). When verified, it records the party as eligible on‑chain.
 - Key pieces:
   - Uses `ChainlinkClient` and `ConfirmedOwner`.
-  - `set_host(string)` sets the backend API base (e.g., `http://localhost:8080`).
+  - `set_host(string)` sets the backend API base (e.g., `election_host`).
   - `verify_party(...)` builds a Chainlink request to `GET <host>/is_party_exist?party_id=<ID>` and expects a JSON boolean at path `party_exist`.
   - `fulfill_verification_party(requestId, party_exist)` is the oracle callback. If `true`, it marks the party as verified in contract storage.
 - System flow:
@@ -207,7 +207,7 @@ cd frontend
 npm run dev
 ```
 
-Cross‑origin config: backend CORS allows `http://localhost:3000` with credentials.
+Cross‑origin config: backend CORS allows `frontend_host` with credentials.
 
 
 ## End‑to‑End Voting Flow

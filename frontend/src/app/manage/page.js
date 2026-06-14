@@ -1,5 +1,6 @@
 "use client";
 
+import { national_id_host } from "../../config";
 import { useState, useEffect } from "react";
 import { election_contract } from "@ethereum/election";
 import { useRouter } from "next/navigation";
@@ -30,7 +31,7 @@ export default function Manage() {
 
   const fetch_merkle_root = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/merkle_root");
+      const response = await axios.get(`${national_id_host}/merkle_root`);
       let root = response.data["merkle_root"];
       if (root && !root.startsWith("0x")) root = "0x" + root;
       set_merkle_root(root);

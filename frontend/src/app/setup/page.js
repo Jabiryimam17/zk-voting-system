@@ -1,5 +1,6 @@
 "use client";
 
+import { election_host, national_id_host } from "../../config";
 import { useState, useEffect } from "react";
 import election_contract from "@ethereum/election";
 import deploy_election from "@ethereum/election_deploy";
@@ -31,7 +32,7 @@ export default function Setup() {
       const verifier_address = await deploy_verifier();
       set_status("Deploying election...");
       set_status("Fetching Merkle root...");
-      const response = await axios.get("http://localhost:5000/merkle_root");
+      const response = await axios.get(`${national_id_host}/merkle_root`);
       let merkle_root = response.data["merkle_root"];
       if (!merkle_root?.startsWith("0x")) merkle_root = "0x" + merkle_root;
       const election_address = await deploy_election(
@@ -41,7 +42,7 @@ export default function Setup() {
 
       set_status("Saving addresses...");
       await axios.post(
-        "http://localhost:8080/api/users/contract_address",
+        `${election_host}/api/users/contract_address`,
         {
           election_address,
           verifier_address,

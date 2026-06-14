@@ -17,6 +17,7 @@ import {
   CardContent,
   Tooltip,
 } from "@mui/material";
+import { election_host } from "../../config";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 
@@ -83,7 +84,7 @@ export default function RegisterForm() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/parties",
+        `${election_host}/api/parties`,
         payload,
         { withCredentials: true }
       );

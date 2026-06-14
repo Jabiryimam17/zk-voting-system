@@ -6,6 +6,7 @@ import { EmojiEvents } from "@mui/icons-material";
 import { election_contract } from "@ethereum/election.js";
 import { ethers } from "ethers";
 import { decodeBytes32String } from "ethers";
+import { election_host } from "../../config";
 import axios from "axios";
 import {
   Table,
@@ -22,7 +23,7 @@ export default function ElectionStatus() {
   useEffect(() => {
     const fetch_parties = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/api/parties", {
+        const response = await axios.get(`${election_host}/api/parties`, {
           withCredentials: true,
         });
         const contract_instance = await election_contract();

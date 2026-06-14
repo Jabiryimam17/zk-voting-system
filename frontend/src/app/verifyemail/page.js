@@ -1,5 +1,6 @@
 "use client";
 
+import { election_host } from "../../config";
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { ShieldCheck, MailCheck, RefreshCw } from "lucide-react";
@@ -101,13 +102,10 @@ export default function VerificationPage() {
     setError("");
     setLoading(true);
     try {
-      const res = await axios.post(
-        "http://localhost:8080/api/users/verify_email",
-        {
-          email: url_email,
-          code,
-        }
-      );
+      const res = await axios.post(`${election_host}/api/users/verify_email`, {
+        email: url_email,
+        code,
+      });
       if (res.data?.is_valid) {
         setVerified(true);
       } else {
@@ -124,10 +122,9 @@ export default function VerificationPage() {
     event?.preventDefault?.();
     setResendStatus("sending");
     try {
-      const res = await axios.patch(
-        "http://localhost:8080/api/users/resend_code",
-        { email: url_email }
-      );
+      const res = await axios.patch(`${election_host}/api/users/resend_code`, {
+        email: url_email,
+      });
       setResendStatus(res.status === 200 ? "success" : "error");
     } catch {
       setResendStatus("error");

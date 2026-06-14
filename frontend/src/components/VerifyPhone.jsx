@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+import { national_id_host } from "../config";
 import { Lock, IdCard, ShieldCheck, X } from "lucide-react";
 import axios from "axios";
 import { ethers, encodeBytes32String } from "ethers";
@@ -12,9 +13,7 @@ import gen_proof from "@utilities/GenProof.js";
 
 async function fetch_user_data(id, password) {
   try {
-    const response = await axios.get(
-      `http://localhost:5000/voter_info?id=${id}`
-    );
+    const response = await axios.get(`${national_id_host}/voter_info?id=${id}`);
     const merkle_path = response.data["merkle_path"];
     const secrets = response.data["secret"];
     if (!secrets) {

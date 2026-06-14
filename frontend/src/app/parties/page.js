@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { election_host } from "../../config";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -21,7 +22,7 @@ export default function PartiesPage() {
   useEffect(() => {
     const fetch_data = async () => {
       try {
-        const res = await fetch("http://localhost:8080/api/parties", {
+        const res = await fetch(`${election_host}/api/parties`, {
           credentials: "include",
         });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);

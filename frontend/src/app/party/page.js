@@ -8,15 +8,7 @@ import axios from "axios";
 import { useSearchParams } from "next/navigation";
 import cookies from "js-cookie";
 import { jwtDecode } from "jwt-decode";
-import {
-  User,
-  Eye,
-  CheckCircle2,
-  TriangleAlert,
-  X,
-  Info,
-  Target,
-} from "lucide-react";
+import { election_host, frontend_host } from "../../config";
 
 const PartyProfile = () => {
   const [national_id, set_national_id] = useState("");
@@ -30,7 +22,7 @@ const PartyProfile = () => {
     party_description: "",
     party_vision: "",
     party_name: "",
-    party_symbol: "http://localhost:3000/images/download.png",
+    party_symbol: `${frontend_host}/images/download.png`,
     party_shortname: "",
     supporters: "0",
   });
@@ -57,10 +49,9 @@ const PartyProfile = () => {
         set_party_id(id);
         if (!id) return;
 
-        const response = await axios.get(
-          `http://localhost:8080/api/parties/${id}`,
-          { withCredentials: true }
-        );
+        const response = await axios.get(`${election_host}/api/parties/${id}`, {
+          withCredentials: true,
+        });
 
         if (response.status === 200) {
           const payload = response.data?.party;
@@ -98,8 +89,7 @@ const PartyProfile = () => {
             party_vision: partyData?.party_vision || "",
             party_name: partyData?.party_name || "",
             party_symbol:
-              partyData?.party_symbol ||
-              "http://localhost:3000/images/download.png",
+              partyData?.party_symbol || `${frontend_host}/images/download.png`,
             party_shortname:
               partyData?.short_name || partyData?.party_shortname || "",
             supporters: supporters,
@@ -138,7 +128,7 @@ const PartyProfile = () => {
                   <img
                     src={
                       party?.party_symbol ||
-                      "http://localhost:3000/images/download.png"
+                      `${frontend_host}/images/download.png`
                     }
                     alt={party?.party_name || "Party symbol"}
                     className="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover ring-4 ring-white/30 shadow-lg"

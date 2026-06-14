@@ -1,6 +1,7 @@
 // JavaScript (React / Next.js)
 "use client";
 
+import { election_host } from "../config";
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -16,7 +17,7 @@ export default function SiteHeader({
     try {
       set_is_logging_out(true);
       // Call your backend logout (adjust URL as needed)
-      const res = await fetch("http://localhost:8080/api/users/logout", {
+      const res = await fetch(`${election_host}/api/users/logout`, {
         method: "POST",
         credentials: "include", // include cookies
         headers: { "Content-Type": "application/json" },

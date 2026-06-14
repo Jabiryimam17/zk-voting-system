@@ -8,9 +8,11 @@ export default function contact_interface(contract_address) {
   return new ethers.Contract(contract_address, abi, ether);
 }
 
+import { election_host } from "../config";
+
 export async function election_contract() {
   const response = await axios.get(
-    "http://localhost:8080/api/users/contract_address",
+    `${election_host}/api/users/contract_address`,
     {
       withCredentials: true,
     }

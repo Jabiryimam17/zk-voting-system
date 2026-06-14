@@ -1,3 +1,4 @@
+import { national_id_host } from "../config.js";
 import express from "express";
 import {
   generate_token,
@@ -56,7 +57,7 @@ router.post("/register", async (req, res) => {
   const match_response = await axios({
     method: "POST",
     data: { national_id: national_id, email: email },
-    url: "http://localhost:5000/verify_match",
+    url: `${national_id_host}/verify_match`,
     headers: {
       "Content-Type": "application/json",
     },
