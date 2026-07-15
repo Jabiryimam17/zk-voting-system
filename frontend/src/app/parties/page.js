@@ -22,13 +22,7 @@ export default function PartiesPage() {
   const [loading, set_loading] = useState(true);
 
   useEffect(() => {
-    const token = document.cookie
-      .split("; ")
-      .find((row) => row.startsWith("token="))
-      ?.split("=")[1];
-    if (!token) {
-      router.push("/login");
-    }
+    // We rely on the API call redirecting to login if unauthorized
   }, [router]);
 
   useEffect(() => {
@@ -37,6 +31,10 @@ export default function PartiesPage() {
         const res = await fetch(`${election_host}/api/parties`, {
           credentials: "include",
         });
+        if (res.status === 401) {
+          router.push("/login");
+          return;
+        }
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
         set_parties(data.parties || []);
@@ -47,7 +45,7 @@ export default function PartiesPage() {
       }
     };
     fetch_data();
-  }, []);
+  }, [router]);
 
   const toggle_goals = (idx) => {
     set_expanded_index((cur) => (cur === idx ? null : idx));

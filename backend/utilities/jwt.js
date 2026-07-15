@@ -6,7 +6,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const JWT_SECRET_KEY = process.env.JWT_SECRET_KEY;
-const MAX_AGE = 60 * 60 * 60;
+const MAX_AGE = 60 * 60 * 24; // 24 hours
 const private_key = Buffer.from(
   process.env.PRIVATE_KEY || "",
   "base64",
@@ -36,22 +36,23 @@ export function verify_token(token) {
 
 export function set_token_cookie(res, token) {
   const cookie = serialize("token", token, {
-    httpOnly: false,
-    secure: process.env.NODE_ENV === "production",
+    httpOnly: true,
+    secure: true,
     maxAge: MAX_AGE,
     path: "/",
-    sameSite: "lax",
+    sameSite: "none",
   });
   res.setHeader("Set-Cookie", cookie);
 }
 
 export function remove_token_cookie(res) {
   const cookie = serialize("token", "", {
-    httpOnly: false,
-    secure: process.env.NODE_ENV === "production",
+    httpOnly: true,
+    secure: true,
     maxAge: -1,
     expires: new Date(0),
     path: "/",
+    sameSite: "none",
   });
   return res.setHeader("Set-Cookie", cookie);
 }

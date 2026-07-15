@@ -6,6 +6,8 @@ import { useRouter } from "next/navigation";
 import axios from "axios";
 import { jwtDecode as jwt_decode } from "jwt-decode";
 
+const election_host =
+  process.env.NEXT_PUBLIC_ELECTION_HOST || "http://localhost:8080";
 const national_id_host =
   process.env.NEXT_PUBLIC_NATIONAL_ID_HOST || "http://localhost:5000";
 
@@ -19,25 +21,21 @@ export default function Manage() {
   const [error_msg, set_error_msg] = useState("");
 
   useEffect(() => {
-    const token = document.cookie
-      .split("; ")
-      .find((row) => row.startsWith("token="))
-      ?.split("=")[1];
-    if (token) {
+    const check_auth = async () => {
       try {
-        const decoded = jwt_decode(token);
-        console.log("Decoded token:", decoded);
-        if (!decoded.admin) {
+        const res = await axios.get(`${election_host}/api/users/me`, {
+          withCredentials: true,
+        });
+        if (!res.data.admin) {
           router.push("/unauthorized");
         }
       } catch (e) {
-        console.error("Token decoding failed:", e);
+        console.error("Auth check failed:", e);
         router.push("/login");
       }
-    } else {
-      router.push("/login");
-    }
+    };
 
+    check_auth();
     fetch_merkle_root();
   }, [router]);
 

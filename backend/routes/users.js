@@ -210,4 +210,10 @@ router.get("/contract_address", async (req, res) => {
   }
 });
 
+router.get("/me", with_auth, async (req, res) => {
+  res.status(200).json({
+    admin: req.admin,
+  });
+});
+
 export default router;
