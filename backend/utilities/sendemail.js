@@ -1,4 +1,4 @@
-import nodemailer from "nodemailer";
+import axios from "axios";
 
 export const format_email_message = (code) => {
   return `
@@ -92,18 +92,27 @@ export const format_email_message = (code) => {
   `;
 };
 export async function send_email(recipient, subject, html) {
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: process.env.EMAIL_SENDER,
-      pass: process.env.APP_PASSWORD,
-    },
-  });
-  await transporter.sendMail({
-    from: process.env.EMAIL_SENDER,
-    to: recipient,
+  const url = "https://api.brevo.com/v3/smtp/email";
+  
+  const headers = {
+    "api-key": process.env.BREVO_API_KEY,
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+  };
+
+  const data = {
+    sender: { email: process.env.EMAIL_SENDER },
+    to: [{ email: recipient }],
     subject: subject,
-    html: html,
-  });
+    htmlContent: html,
+  };
+
+  try {
+    const response = await axios.post(url, data, { headers });
+    return response.data;
+  } catch (error) {
+    console.error("Error sending email via Brevo API:", error.response ? error.response.data : error.message);
+    throw error;
+  }
 }
 export default send_email;

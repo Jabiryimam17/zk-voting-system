@@ -11,7 +11,6 @@ import {
 import election_db from "../database/CreateConnection.js";
 import { nanoid } from "nanoid";
 import axios from "axios";
-import nodemailer from "nodemailer";
 import { send_email, format_email_message } from "../utilities/sendemail.js";
 const router = express.Router();
 import { with_auth } from "../middlewares/auth.js";
