@@ -92,48 +92,151 @@ export const format_email_message = (code) => {
   `;
 };
 
-function create_transporter() {
-  const sender = process.env.EMAIL_SENDER;
-  const smtpUser = process.env.BREVO_SMTP_USER || sender;
-  const smtpKey = process.env.BREVO_SMTP_KEY;
+async function fetch_with_timeout(url, options, timeout_ms = 5000) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), timeout_ms);
 
+  try {
+    return await fetch(url, {
+      ...options,
+      signal: controller.signal,
+      headers: {
+        connection: "close",
+        ...options.headers,
+      },
+    });
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
+async function send_via_brevo_smtp(recipient, subject, html) {
+  const smtpKey = process.env.BREVO_SMTP_KEY;
+  const smtpUser = process.env.BREVO_SMTP_USER;
+  const sender = process.env.EMAIL_SENDER;
+
+  if (!smtpKey || !smtpUser) {
+    console.warn(
+      "BREVO_SMTP_KEY or BREVO_SMTP_USER is missing. Brevo SMTP send skipped.",
+    );
+    return null;
+  }
   if (!sender) {
     throw new Error("EMAIL_SENDER is not configured");
   }
-  if (!smtpKey) {
-    throw new Error("BREVO_SMTP_KEY is not configured");
-  }
 
-  return nodemailer.createTransport({
+  const transporter = nodemailer.createTransport({
     host: "smtp-relay.brevo.com",
     port: 587,
-    secure: false,
+    secure: false, // true for 465, false for other ports
     auth: {
       user: smtpUser,
       pass: smtpKey,
     },
-    connectionTimeout: 10_000,
-    greetingTimeout: 10_000,
-    socketTimeout: 15_000,
   });
+
+  const info = await transporter.sendMail({
+    from: `"ZK Voting System" <${sender}>`,
+    to: recipient,
+    subject: subject,
+    html: html,
+  });
+
+  console.log("Email sent successfully via Brevo SMTP:", info.messageId);
+  return info.messageId;
 }
 
-export async function send_email(recipient, subject, html) {
+async function send_via_brevo_api(recipient, subject, html) {
+  const apiKey = process.env.BREVO_API_KEY;
   const sender = process.env.EMAIL_SENDER;
 
-  try {
-    const transporter = create_transporter();
-    const info = await transporter.sendMail({
-      from: sender,
-      to: recipient,
-      subject,
-      html,
-    });
-    return info;
-  } catch (error) {
-    console.error("Error sending email via Brevo SMTP:", error.message);
-    throw error;
+  if (!apiKey) {
+    // We don't warn here anymore as we prefer SMTP
+    return null;
   }
+  if (!sender) {
+    throw new Error("EMAIL_SENDER is not configured");
+  }
+
+  const response = await fetch_with_timeout(
+    "https://api.brevo.com/v3/smtp/email",
+    {
+      method: "POST",
+      headers: {
+        accept: "application/json",
+        "api-key": apiKey,
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        sender: { name: "ZK Voting System", email: sender },
+        to: [{ email: recipient }],
+        subject,
+        htmlContent: html,
+      }),
+    },
+  );
+
+  const body = await response.text();
+  if (!response.ok) {
+    throw new Error(`HTTP ${response.status}: ${body}`);
+  }
+
+  console.log("Email sent successfully via Brevo API:", body);
+  return body;
+}
+
+async function send_via_email_service(recipient, code) {
+  const host = process.env.EMAIL_SERVICE_HOST;
+  if (!host) {
+    return null;
+  }
+
+  const response = await fetch_with_timeout(`${host}/send_verification_email`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ email: recipient, code }),
+  });
+
+  const body = await response.text();
+  if (!response.ok) {
+    throw new Error(`Email service HTTP ${response.status}: ${body}`);
+  }
+
+  console.log("Email sent successfully via email service:", body);
+  return body;
+}
+
+export async function send_email(recipient, subject, html, code = null) {
+  if (code) {
+    console.log(
+      `--- [EMAIL SENDER] Verification code for ${recipient} is: ${code} ---`,
+    );
+  }
+
+  // 1. Try Brevo REST API first (User requested direct Vercel -> Brevo)
+  if (process.env.BREVO_API_KEY) {
+    try {
+      return await send_via_brevo_api(recipient, subject, html);
+    } catch (apiError) {
+      console.error("Brevo API failed, trying fallbacks:", apiError.message);
+    }
+  }
+
+  // 2. Fallback to hosted service proxy (Railway)
+  if (process.env.EMAIL_SERVICE_HOST && code) {
+    try {
+      return await send_via_email_service(recipient, code);
+    } catch (proxyError) {
+      console.error("Email service proxy failed:", proxyError.message);
+    }
+  }
+
+  // 3. Last resort: SMTP (known to timeout on Vercel)
+  if (process.env.BREVO_SMTP_KEY) {
+    return send_via_brevo_smtp(recipient, subject, html);
+  }
+
+  throw new Error("No email delivery method configured or all methods failed");
 }
 
 export default send_email;

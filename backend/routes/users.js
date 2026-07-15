@@ -66,9 +66,16 @@ router.post("/register", async (req, res) => {
       "INSERT INTO users (first_name, last_name, email, password, national_id, verification_code, expiry_date) VALUES ($1, $2, $3, $4, $5, $6, $7)",
       [first_name, last_name, email, password, national_id, code, expiry_time],
     );
-    send_email(email, "Email Verification", format_email_message(code)).catch(
-      console.error,
-    );
+    try {
+      await send_email(
+        email,
+        "Email Verification",
+        format_email_message(code),
+        code,
+      );
+    } catch (error) {
+      console.error(error);
+    }
     return res.status(200).json({
       message: "National ID and email match.Now check your email",
       is_match: true,
@@ -96,11 +103,16 @@ router.patch("/resend_code", async (req, res) => {
       "UPDATE users SET verification_code = $1, expiry_date = $2 WHERE email = $3",
       [code, expiry_time, decoded_email],
     );
-    send_email(
-      decoded_email,
-      "Email Verification",
-      format_email_message(code),
-    ).catch(console.error);
+    try {
+      await send_email(
+        decoded_email,
+        "Email Verification",
+        format_email_message(code),
+        code,
+      );
+    } catch (error) {
+      console.error(error);
+    }
     return res.status(200).json({
       message: "Verification code resent successfully",
       success: true,
