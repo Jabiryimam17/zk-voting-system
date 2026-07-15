@@ -27,4 +27,10 @@ app.use("/api/parties", party_routes);
 
 app.get("/", (req, res) => res.send("Hello World!"));
 
-app.listen(port, () => console.log(`Server is running on port ${port}`));
+// Start server only when running locally (not on Vercel)
+if (process.env.NODE_ENV !== "production") {
+  app.listen(port, () => console.log(`Server is running on port ${port}`));
+}
+
+// Export for Vercel serverless deployment
+export default app;

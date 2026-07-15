@@ -1,5 +1,4 @@
 import nodemailer from "nodemailer";
-import "dotenv/config"; // Load .env
 
 export const format_email_message = (code) => {
   return `

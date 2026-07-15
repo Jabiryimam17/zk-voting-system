@@ -15,11 +15,6 @@ import nodemailer from "nodemailer";
 import { send_email, format_email_message } from "../utilities/sendemail.js";
 const router = express.Router();
 import { with_auth } from "../middlewares/auth.js";
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 // const nanoid = customAlphabet("1234567890", 6);
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
@@ -147,8 +142,6 @@ router.post("/logout", with_auth, async (req, res) => {
   return res.status(200).json({ message: "You have successfully logged out" });
 });
 
-const filePath = path.join(__dirname, "..", "utilities", "address.json");
-
 router.post("/contract_address", with_auth, async (req, res) => {
   try {
     if (!req.admin) return res.status(403).json({ message: "Unauthorized" });
@@ -157,22 +150,24 @@ router.post("/contract_address", with_auth, async (req, res) => {
     if (!election_address) {
       return res.status(400).json({ message: "Address is required" });
     }
-    const file_content = fs.readFileSync(filePath, "utf-8");
-    const contents = JSON.parse(file_content);
-    if (contents["merkle setup"])
+
+    // Check if merkle setup is already done
+    const setup_result = await election_db.query(
+      "SELECT value FROM config WHERE key = $1",
+      ["merkle_setup"],
+    );
+    if (setup_result.rows.length > 0 && setup_result.rows[0].value === "true") {
       return res.status(400).json({ message: "Address already set" });
-    fs.writeFileSync(
-      filePath,
-      JSON.stringify(
-        {
-          "election address": election_address,
-          "verifier address": verifier_address,
-          "merkle setup": true,
-        },
-        null,
-        2,
-      ),
-      "utf-8",
+    }
+
+    // Insert contract addresses into config table
+    await election_db.query(
+      `INSERT INTO config (key, value) VALUES
+        ('election_address', $1),
+        ('verifier_address', $2),
+        ('merkle_setup', $3)
+      ON CONFLICT (key) DO UPDATE SET value = EXCLUDED.value`,
+      [election_address, verifier_address, "true"],
     );
 
     return res.status(200).json({
@@ -185,11 +180,13 @@ router.post("/contract_address", with_auth, async (req, res) => {
   }
 });
 
-router.get("/contract_address", (req, res) => {
+router.get("/contract_address", async (req, res) => {
   try {
-    const file_content = fs.readFileSync(filePath, "utf-8");
-    const addresses = JSON.parse(file_content);
-    const address = addresses["election address"];
+    const result = await election_db.query(
+      "SELECT value FROM config WHERE key = $1",
+      ["election_address"],
+    );
+    const address = result.rows.length > 0 ? result.rows[0].value : null;
 
     return res.status(200).json({
       message: "Contract address fetched successfully",

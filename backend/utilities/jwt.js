@@ -1,15 +1,20 @@
 import jwt from "jsonwebtoken";
 
 import { serialize } from "cookie";
-import fs from "fs";
 import dotenv from "dotenv";
 
-dotenv.config({ path: "../.env" });
+dotenv.config();
 
 const JWT_SECRET_KEY = process.env.JWT_SECRET_KEY;
 const MAX_AGE = 60 * 60 * 60;
-const private_key = fs.readFileSync("./keys/private.key", "utf8");
-const public_key = fs.readFileSync("./keys/public.key", "utf8");
+const private_key = Buffer.from(
+  process.env.PRIVATE_KEY || "",
+  "base64",
+).toString("utf8");
+const public_key = Buffer.from(
+  process.env.PUBLIC_KEY || "",
+  "base64",
+).toString("utf8");
 
 export function generate_token(user) {
   const token = jwt.sign(user, private_key, {
