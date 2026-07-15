@@ -1,4 +1,4 @@
-import axios from "axios";
+import nodemailer from "nodemailer";
 
 export const format_email_message = (code) => {
   return `
@@ -91,40 +91,49 @@ export const format_email_message = (code) => {
     </html>
   `;
 };
-export async function send_email(recipient, subject, html) {
-  const apiKey = process.env.BREVO_API_KEY;
-  const sender = process.env.EMAIL_SENDER;
 
-  if (!apiKey) {
-    throw new Error("BREVO_API_KEY is not configured");
-  }
+function create_transporter() {
+  const sender = process.env.EMAIL_SENDER;
+  const smtpUser = process.env.BREVO_SMTP_USER || sender;
+  const smtpKey = process.env.BREVO_SMTP_KEY;
+
   if (!sender) {
     throw new Error("EMAIL_SENDER is not configured");
   }
+  if (!smtpKey) {
+    throw new Error("BREVO_SMTP_KEY is not configured");
+  }
+
+  return nodemailer.createTransport({
+    host: "smtp-relay.brevo.com",
+    port: 587,
+    secure: false,
+    auth: {
+      user: smtpUser,
+      pass: smtpKey,
+    },
+    connectionTimeout: 10_000,
+    greetingTimeout: 10_000,
+    socketTimeout: 15_000,
+  });
+}
+
+export async function send_email(recipient, subject, html) {
+  const sender = process.env.EMAIL_SENDER;
 
   try {
-    const { data } = await axios.post(
-      "https://api.brevo.com/v3/smtp/email",
-      {
-        sender: { email: sender },
-        to: [{ email: recipient }],
-        subject,
-        htmlContent: html,
-      },
-      {
-        headers: {
-          "api-key": apiKey,
-          "Content-Type": "application/json",
-          accept: "application/json",
-        },
-        timeout: 15_000,
-      },
-    );
-    return data;
+    const transporter = create_transporter();
+    const info = await transporter.sendMail({
+      from: sender,
+      to: recipient,
+      subject,
+      html,
+    });
+    return info;
   } catch (error) {
-    const detail = error.response?.data ?? error.message;
-    console.error("Error sending email via Brevo API:", detail);
+    console.error("Error sending email via Brevo SMTP:", error.message);
     throw error;
   }
 }
+
 export default send_email;
