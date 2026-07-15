@@ -1,4 +1,4 @@
-import SibApiV3Sdk from "sib-api-v3-sdk";
+import axios from "axios";
 
 export const format_email_message = (code) => {
   return `
@@ -92,25 +92,38 @@ export const format_email_message = (code) => {
   `;
 };
 export async function send_email(recipient, subject, html) {
-  const defaultClient = SibApiV3Sdk.ApiClient.instance;
+  const apiKey = process.env.BREVO_API_KEY;
+  const sender = process.env.EMAIL_SENDER;
 
-  // Configure API key authorization: api-key
-  const apiKey = defaultClient.authentications["api-key"];
-  apiKey.apiKey = process.env.BREVO_API_KEY;
-
-  const apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
-
-  const sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail();
-  sendSmtpEmail.subject = subject;
-  sendSmtpEmail.htmlContent = html;
-  sendSmtpEmail.sender = { email: process.env.EMAIL_SENDER };
-  sendSmtpEmail.to = [{ email: recipient }];
+  if (!apiKey) {
+    throw new Error("BREVO_API_KEY is not configured");
+  }
+  if (!sender) {
+    throw new Error("EMAIL_SENDER is not configured");
+  }
 
   try {
-    const data = await apiInstance.sendTransacEmail(sendSmtpEmail);
+    const { data } = await axios.post(
+      "https://api.brevo.com/v3/smtp/email",
+      {
+        sender: { email: sender },
+        to: [{ email: recipient }],
+        subject,
+        htmlContent: html,
+      },
+      {
+        headers: {
+          "api-key": apiKey,
+          "Content-Type": "application/json",
+          accept: "application/json",
+        },
+        timeout: 15_000,
+      },
+    );
     return data;
   } catch (error) {
-    console.error("Error sending email via Brevo SDK:", error);
+    const detail = error.response?.data ?? error.message;
+    console.error("Error sending email via Brevo API:", detail);
     throw error;
   }
 }
