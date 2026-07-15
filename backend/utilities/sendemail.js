@@ -1,4 +1,4 @@
-// Using native fetch to avoid Node/Axios TLS handshake issues on serverless environments
+import SibApiV3Sdk from "sib-api-v3-sdk";
 
 export const format_email_message = (code) => {
   return `
@@ -92,37 +92,25 @@ export const format_email_message = (code) => {
   `;
 };
 export async function send_email(recipient, subject, html) {
-  const url = "https://api.brevo.com/v3/smtp/email";
-  
-  const headers = {
-    "api-key": process.env.BREVO_API_KEY,
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-  };
+  const defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-  const data = {
-    sender: { email: process.env.EMAIL_SENDER },
-    to: [{ email: recipient }],
-    subject: subject,
-    htmlContent: html,
-  };
+  // Configure API key authorization: api-key
+  const apiKey = defaultClient.authentications["api-key"];
+  apiKey.apiKey = process.env.BREVO_API_KEY;
+
+  const apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
+
+  const sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail();
+  sendSmtpEmail.subject = subject;
+  sendSmtpEmail.htmlContent = html;
+  sendSmtpEmail.sender = { email: process.env.EMAIL_SENDER };
+  sendSmtpEmail.to = [{ email: recipient }];
 
   try {
-    const response = await fetch(url, {
-      method: "POST",
-      headers: headers,
-      body: JSON.stringify(data),
-    });
-
-    if (!response.ok) {
-      const errorText = await response.text();
-      throw new Error(`HTTP error! status: ${response.status}, body: ${errorText}`);
-    }
-
-    const result = await response.json();
-    return result;
+    const data = await apiInstance.sendTransacEmail(sendSmtpEmail);
+    return data;
   } catch (error) {
-    console.error("Error sending email via Brevo API (fetch):", error.message);
+    console.error("Error sending email via Brevo SDK:", error);
     throw error;
   }
 }
