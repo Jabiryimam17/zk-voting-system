@@ -1,7 +1,7 @@
 // JavaScript (React / Next.js)
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
@@ -15,6 +15,40 @@ export default function SiteHeader({
 }) {
   const router = useRouter();
   const [is_logging_out, set_is_logging_out] = useState(false);
+  const [auth_state, set_auth_state] = useState({
+    is_authenticated,
+    is_admin,
+  });
+
+  useEffect(() => {
+    set_auth_state({ is_authenticated, is_admin });
+  }, [is_authenticated, is_admin]);
+
+  useEffect(() => {
+    const sync_auth_state = async () => {
+      try {
+        const res = await fetch(`${election_host}/api/users/me`, {
+          method: "GET",
+          credentials: "include",
+        });
+
+        if (!res.ok) {
+          set_auth_state({ is_authenticated: false, is_admin: false });
+          return;
+        }
+
+        const data = await res.json();
+        set_auth_state({
+          is_authenticated: true,
+          is_admin: !!data.admin,
+        });
+      } catch (err) {
+        set_auth_state({ is_authenticated: false, is_admin: false });
+      }
+    };
+
+    sync_auth_state();
+  }, []);
 
   const handle_logout = async () => {
     try {
@@ -34,6 +68,7 @@ export default function SiteHeader({
       console.error(err);
     } finally {
       // Ensure UI updates even if API fails (cookie may already be gone)
+      set_auth_state({ is_authenticated: false, is_admin: false });
       set_is_logging_out(false);
       router.push("/"); // go to home (or a dedicated logged-out page)
       router.refresh(); // make the server layout re-read cookies
@@ -50,7 +85,7 @@ export default function SiteHeader({
             <Link href="/" className="btn-link">
               Home
             </Link>
-            {is_authenticated ? (
+            {auth_state.is_authenticated ? (
               <div className="flex items-center gap-2">
                 <Link
                   href="/results"
@@ -66,7 +101,7 @@ export default function SiteHeader({
                 >
                   Parties
                 </Link>
-                {is_admin && (
+                {auth_state.is_admin && (
                   <Link
                     href="/manage"
                     className="btn-link/soft text-yellow-200"

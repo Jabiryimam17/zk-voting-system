@@ -6,7 +6,9 @@ import deploy_election from "@ethereum/election_deploy";
 import deploy_verifier from "@ethereum/verifier_deploy";
 import { useRouter } from "next/navigation";
 import axios from "axios";
-import { jwtDecode as jwt_decode } from "jwt-decode";
+
+const election_host =
+  process.env.NEXT_PUBLIC_ELECTION_HOST || "http://localhost:8080";
 
 const national_id_host =
   process.env.NEXT_PUBLIC_NATIONAL_ID_HOST || "http://localhost:5000";

@@ -18,7 +18,7 @@
     </persistenceIdMap>
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="261" />
+    <option name="cachedIndexableFilesCount" value="277" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -43,7 +43,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/PycharmProjects/id-registrations" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -71,61 +71,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.642981929791346" />
-      <entry key="MS500" value="3.863148243275809" />
-      <entry key="S2" value="10.757415191075172" />
-      <entry key="S5" value="21.533749186654163" />
-      <entry key="S10" value="33.63627655475463" />
-      <entry key="S30" value="59.93783840809632" />
-      <entry key="S60" value="78.15812577391227" />
-      <entry key="M2" value="95.29734743985745" />
-      <entry key="M5" value="119.43356481456402" />
-      <entry key="M10" value="151.8040868058897" />
-      <entry key="M15" value="183.67709964098432" />
-      <entry key="M30" value="269.1524106886508" />
-      <entry key="H1" value="392.7260619437744" />
-      <entry key="H2" value="549.4663126659614" />
-      <entry key="H4" value="721.1241578325512" />
-      <entry key="D1" value="1004.3659442453172" />
-      <entry key="W1" value="1076.9470605875085" />
+      <entry key="MS100" value="2.149123758092376" />
+      <entry key="MS500" value="4.454555383034153" />
+      <entry key="S2" value="11.805117416254719" />
+      <entry key="S5" value="22.462715429413876" />
+      <entry key="S10" value="31.95179700158045" />
+      <entry key="S30" value="43.4241814549918" />
+      <entry key="S60" value="47.991254378113716" />
+      <entry key="M2" value="55.971892245982026" />
+      <entry key="M5" value="87.38482459963564" />
+      <entry key="M10" value="142.5190949683033" />
+      <entry key="M15" value="190.9871361414454" />
+      <entry key="M30" value="305.5942506281505" />
+      <entry key="H1" value="458.6835878066723" />
+      <entry key="H2" value="642.3274841799016" />
+      <entry key="H4" value="836.3019787845926" />
+      <entry key="D1" value="1152.4288510542294" />
+      <entry key="W1" value="1233.424994655572" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="8.289612537669263E-260" />
-      <entry key="MS500" value="1.5265388000720008E-52" />
-      <entry key="S2" value="1.1903941581848333E-13" />
-      <entry key="S5" value="1.1035134398507225E-5" />
-      <entry key="S10" value="0.006904622293396342" />
-      <entry key="S30" value="0.6833812901894728" />
-      <entry key="S60" value="2.301841939518309" />
-      <entry key="M2" value="4.274246370931107" />
-      <entry key="M5" value="6.249487557719159" />
-      <entry key="M10" value="7.366994118493993" />
-      <entry key="M15" value="8.132443623530003" />
-      <entry key="M30" value="10.296963731602505" />
-      <entry key="H1" value="14.500606500862775" />
-      <entry key="H2" value="20.222287942872065" />
-      <entry key="H4" value="25.778055227288924" />
-      <entry key="D1" value="33.75517376089104" />
-      <entry key="W1" value="35.66129395036247" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="4.7511740293903765E-189" />
+      <entry key="S5" value="7.642257862878551E-76" />
+      <entry key="S10" value="5.745951507115337E-38" />
+      <entry key="S30" value="1.384853271002515E-12" />
+      <entry key="S60" value="3.2767690807232333E-6" />
+      <entry key="M2" value="0.005099701082707467" />
+      <entry key="M5" value="0.42317351165757655" />
+      <entry key="M10" value="1.9170231478543027" />
+      <entry key="M15" value="3.31471161832921" />
+      <entry key="M30" value="6.573876298820561" />
+      <entry key="H1" value="11.586235180476333" />
+      <entry key="H2" value="18.07625153982249" />
+      <entry key="H4" value="24.371889077201782" />
+      <entry key="D1" value="33.44107181137157" />
+      <entry key="W1" value="35.613698234820774" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.4999209899797343" />
-      <entry key="MS500" value="3.796269541823272" />
-      <entry key="S2" value="10.71686068131785" />
-      <entry key="S5" value="21.50310628995147" />
-      <entry key="S10" value="33.61897391236085" />
-      <entry key="S30" value="60.594889506741104" />
-      <entry key="S60" value="80.42905409365183" />
-      <entry key="M2" value="99.54492128073177" />
-      <entry key="M5" value="125.66704347725191" />
-      <entry key="M10" value="159.16081888104347" />
-      <entry key="M15" value="191.80117908826938" />
-      <entry key="M30" value="279.4408497179124" />
-      <entry key="H1" value="407.21548400227357" />
-      <entry key="H2" value="569.6771134291197" />
-      <entry key="H4" value="746.8932683389712" />
-      <entry key="D1" value="1038.1188204318105" />
-      <entry key="W1" value="1112.6079984142136" />
+      <entry key="MS100" value="2.0251948982448993" />
+      <entry key="MS500" value="4.397455272056114" />
+      <entry key="S2" value="11.756446102947182" />
+      <entry key="S5" value="22.422065088236266" />
+      <entry key="S10" value="31.921907738569487" />
+      <entry key="S30" value="43.41030247667123" />
+      <entry key="S60" value="47.98352929660251" />
+      <entry key="M2" value="55.97238490266852" />
+      <entry key="M5" value="87.80398135288371" />
+      <entry key="M10" value="144.4312340538339" />
+      <entry key="M15" value="194.2966522172072" />
+      <entry key="M30" value="312.16156949354075" />
+      <entry key="H1" value="470.26025612432767" />
+      <entry key="H2" value="660.3931315088213" />
+      <entry key="H4" value="860.6652374116067" />
+      <entry key="D1" value="1185.8676169136331" />
+      <entry key="W1" value="1269.0383329705912" />
     </decayedShown>
   </component>
   <component name="PackageJsonUpdateNotifier">
@@ -140,6 +140,21 @@
   <component name="ProjectId" id="2xH8TNvGI9SKEp4suAqC1SOFzIg" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectSessionTemplates">
+    <option name="panelTemplate">
+      <template>
+        <option name="modeId" value="Agent" />
+        <option name="model">
+          <model>
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+          </model>
+        </option>
+        <option name="targetType" value="BACKGROUND" />
+        <option name="worktreeMode" value="WORKSPACE" />
+      </template>
+    </option>
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -182,6 +197,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "copilot.chat.legacySessionMetadata.migrated": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "javascript.preferred.runtime.type.id": "node",
@@ -206,7 +222,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "ml.llm.LLMThirdPartyAiProvidersConfigurable",
+    "settings.editor.selected.configurable": "junie.project.settings",
     "solidity.tutorial.shown.welcome": "true",
     "to.speed.mode.migration.done": "true",
     "ts.external.directory.path": "C:\\Users\\Jabir\\AppData\\Roaming\\JetBrains\\IntelliJIdea2025.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
@@ -317,7 +333,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-WS-261.25134.101" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-WS-261.26222.58" />
       </set>
     </attachedChunks>
   </component>
@@ -439,6 +455,8 @@
       <workItem from="1781414985786" duration="3092000" />
       <workItem from="1781420450803" duration="3778000" />
       <workItem from="1781430623450" duration="9309000" />
+      <workItem from="1784120043307" duration="2654000" />
+      <workItem from="1784131069085" duration="1507000" />
     </task>
     <servers />
   </component>
