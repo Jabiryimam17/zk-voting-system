@@ -11,6 +11,7 @@ const election_host =
 export default function SiteHeader({
   title = "Election Dashboard",
   is_authenticated = false,
+  is_admin = false,
 }) {
   const router = useRouter();
   const [is_logging_out, set_is_logging_out] = useState(false);
@@ -50,7 +51,7 @@ export default function SiteHeader({
               Home
             </Link>
             {is_authenticated ? (
-              <div>
+              <div className="flex items-center gap-2">
                 <Link
                   href="/results"
                   className="btn-link/soft"
@@ -65,6 +66,15 @@ export default function SiteHeader({
                 >
                   Parties
                 </Link>
+                {is_admin && (
+                  <Link
+                    href="/manage"
+                    className="btn-link/soft text-yellow-200"
+                    style={{ marginRight: "2px" }}
+                  >
+                    Manage
+                  </Link>
+                )}
                 <button
                   onClick={handle_logout}
                   disabled={is_logging_out}

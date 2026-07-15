@@ -11,10 +11,9 @@ const private_key = Buffer.from(
   process.env.PRIVATE_KEY || "",
   "base64",
 ).toString("utf8");
-const public_key = Buffer.from(
-  process.env.PUBLIC_KEY || "",
-  "base64",
-).toString("utf8");
+const public_key = Buffer.from(process.env.PUBLIC_KEY || "", "base64").toString(
+  "utf8",
+);
 
 export function generate_token(user) {
   const token = jwt.sign(user, private_key, {
@@ -48,7 +47,7 @@ export function set_token_cookie(res, token) {
 
 export function remove_token_cookie(res) {
   const cookie = serialize("token", "", {
-    httpOnly: true,
+    httpOnly: false,
     secure: process.env.NODE_ENV === "production",
     maxAge: -1,
     expires: new Date(0),

@@ -11,16 +11,23 @@ export default async function RootLayout({ children }) {
   const cookie_store = await cookies();
   const token = cookie_store.get("token")?.value;
   let is_authenticated = !!token;
+  let is_admin = false;
+
   if (is_authenticated) {
-    const decoded_token = jwt.decode(token);
-    if (decoded_token.exp < Date.now() / 1000) {
+    try {
+      const decoded_token = jwt.decode(token);
+      if (decoded_token.exp < Date.now() / 1000) {
+        is_authenticated = false;
+        // Optional: clear cookie via server action or a separate route
+        // For now we just treat it as not authenticated
+      } else {
+        is_admin = !!decoded_token.admin;
+      }
+    } catch (e) {
       is_authenticated = false;
-      await fetch(`${election_host}/api/users/logout`, {
-        withCredentials: true,
-      });
-      redirect("/");
     }
   }
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -42,6 +49,7 @@ export default async function RootLayout({ children }) {
           <SiteHeader
             title="Election Dashboard"
             is_authenticated={is_authenticated}
+            is_admin={is_admin}
           />
 
           <main className="flex-1">{children}</main>

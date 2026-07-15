@@ -22,6 +22,16 @@ export default function PartiesPage() {
   const [loading, set_loading] = useState(true);
 
   useEffect(() => {
+    const token = document.cookie
+      .split("; ")
+      .find((row) => row.startsWith("token="))
+      ?.split("=")[1];
+    if (!token) {
+      router.push("/login");
+    }
+  }, [router]);
+
+  useEffect(() => {
     const fetch_data = async () => {
       try {
         const res = await fetch(`${election_host}/api/parties`, {

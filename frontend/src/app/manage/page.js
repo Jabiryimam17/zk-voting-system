@@ -24,9 +24,19 @@ export default function Manage() {
       .find((row) => row.startsWith("token="))
       ?.split("=")[1];
     if (token) {
-      const decoded = jwt_decode(token);
-      if (!decoded.admin) router.push("/unauthorized");
-    } else router.push("/login");
+      try {
+        const decoded = jwt_decode(token);
+        console.log("Decoded token:", decoded);
+        if (!decoded.admin) {
+          router.push("/unauthorized");
+        }
+      } catch (e) {
+        console.error("Token decoding failed:", e);
+        router.push("/login");
+      }
+    } else {
+      router.push("/login");
+    }
 
     fetch_merkle_root();
   }, [router]);
