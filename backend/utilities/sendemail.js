@@ -1,4 +1,4 @@
-import axios from "axios";
+// Using native fetch to avoid Node/Axios TLS handshake issues on serverless environments
 
 export const format_email_message = (code) => {
   return `
@@ -108,10 +108,21 @@ export async function send_email(recipient, subject, html) {
   };
 
   try {
-    const response = await axios.post(url, data, { headers });
-    return response.data;
+    const response = await fetch(url, {
+      method: "POST",
+      headers: headers,
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`HTTP error! status: ${response.status}, body: ${errorText}`);
+    }
+
+    const result = await response.json();
+    return result;
   } catch (error) {
-    console.error("Error sending email via Brevo API:", error.response ? error.response.data : error.message);
+    console.error("Error sending email via Brevo API (fetch):", error.message);
     throw error;
   }
 }
