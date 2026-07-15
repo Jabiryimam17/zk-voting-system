@@ -8,6 +8,15 @@ import axios from "axios";
 import { useSearchParams } from "next/navigation";
 import cookies from "js-cookie";
 import { jwtDecode } from "jwt-decode";
+import {
+  CheckCircle2,
+  Eye,
+  Info,
+  Target,
+  TriangleAlert,
+  User,
+  X,
+} from "lucide-react";
 
 const election_host =
   process.env.NEXT_PUBLIC_ELECTION_HOST || "http://localhost:8080";
