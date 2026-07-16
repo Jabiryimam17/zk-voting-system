@@ -27,30 +27,65 @@ export default function ElectionStatus() {
         const response = await axios.get(`${election_host}/api/parties`, {
           withCredentials: true,
         });
-        const contract_instance = await election_contract();
         const api_parties = response.data.parties || [];
-        let party_ids = [];
+        const api_party_ids = api_parties
+          .map((party) => party?.ID || party?.id || party?.party_id || null)
+          .filter(Boolean);
 
-        if (typeof contract_instance.fetch_parties === "function") {
-          const contract_parties_id = await contract_instance.fetch_parties();
-          party_ids = contract_parties_id.map((party_id_bytes) => {
-            try {
-              return decodeBytes32String(party_id_bytes);
-            } catch (e) {
-              console.error("Error decoding party_id:", party_id_bytes, e);
-              return null;
-            }
-          });
-        } else {
-          party_ids = api_parties.map(
-            (party) => party?.ID || party?.id || party?.party_id || null
+        let contract_instance = null;
+        try {
+          contract_instance = await election_contract();
+        } catch (e) {
+          console.warn(
+            "Unable to initialize election contract, using API data",
+            e
           );
+        }
+
+        let party_ids = api_party_ids;
+        if (
+          contract_instance &&
+          typeof contract_instance.fetch_parties === "function"
+        ) {
+          try {
+            const contract_parties_id = await contract_instance.fetch_parties();
+            const decoded_ids = contract_parties_id
+              .map((party_id_bytes) => {
+                try {
+                  return decodeBytes32String(party_id_bytes);
+                } catch (e) {
+                  console.error("Error decoding party_id:", party_id_bytes, e);
+                  return null;
+                }
+              })
+              .filter(Boolean);
+
+            if (decoded_ids.length > 0) {
+              party_ids = decoded_ids;
+            }
+          } catch (e) {
+            console.warn(
+              "fetch_parties() failed, falling back to API party IDs",
+              e
+            );
+          }
         }
 
         const parties_map = new Map(
           api_parties.map((p) => [p["ID"] || p.id || p.party_id, p])
         );
-        const total_supporters = await contract_instance.total_participants();
+        let total_supporters = 0n;
+        if (
+          contract_instance &&
+          typeof contract_instance.total_participants === "function"
+        ) {
+          try {
+            total_supporters = await contract_instance.total_participants();
+          } catch (e) {
+            console.warn("total_participants() failed, using 0", e);
+          }
+        }
+
         const full_parties = await Promise.all(
           party_ids.map(async (party_id) => {
             if (!party_id) return null;
@@ -61,11 +96,24 @@ export default function ElectionStatus() {
               return null;
             }
 
-            const party_id_bytes = encodeBytes32String(String(party_id));
-            const supporters_big_number = await contract_instance.parties(
-              party_id_bytes
-            );
-            const supporters = supporters_big_number.supporters.toString();
+            let supporters = "0";
+            if (
+              contract_instance &&
+              typeof contract_instance.parties === "function"
+            ) {
+              try {
+                const party_id_bytes = encodeBytes32String(String(party_id));
+                const supporters_big_number = await contract_instance.parties(
+                  party_id_bytes
+                );
+                supporters = supporters_big_number.supporters.toString();
+              } catch (e) {
+                console.warn(
+                  `parties(${party_id}) failed, using 0 supporters`,
+                  e
+                );
+              }
+            }
 
             return {
               leader: party.party_leader_name,

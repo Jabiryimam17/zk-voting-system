@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bff0f43c-f2de-4352-a79a-8b4840aae26f" name="Changes" comment="">
       <change afterPath="$USER_HOME$/PycharmProjects/id-registrations/backend/scripts/add-parties-sample.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -458,7 +457,7 @@
       <workItem from="1781430623450" duration="9309000" />
       <workItem from="1784120043307" duration="2654000" />
       <workItem from="1784131069085" duration="7176000" />
-      <workItem from="1784182272393" duration="257000" />
+      <workItem from="1784182272393" duration="787000" />
     </task>
     <servers />
   </component>
