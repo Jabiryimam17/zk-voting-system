@@ -51,8 +51,34 @@ export default function PartiesPage() {
     set_expanded_index((cur) => (cur === idx ? null : idx));
   };
 
+  const resolve_party_id = (party) =>
+    party?.ID || party?.id || party?.party_id || party?.party_shortname || "";
+
+  const parse_goals = (raw_goals) => {
+    if (Array.isArray(raw_goals)) {
+      return raw_goals.map((goal) => String(goal).trim()).filter(Boolean);
+    }
+
+    if (typeof raw_goals !== "string") return [];
+
+    let text = raw_goals.trim();
+    if (!text) return [];
+
+    text = text
+      .replace(/^[\[{]+/, "")
+      .replace(/[\]}]+$/, "")
+      .replace(/\/+$/, "")
+      .replace(/\"/g, '"')
+      .replace(/[“”]/g, '"');
+
+    return text
+      .split(",")
+      .map((goal) => goal.replace(/^\s*"+|"+\s*$/g, "").trim())
+      .filter(Boolean);
+  };
+
   const handle_vote = (idx) => {
-    const id = parties[idx]?.ID;
+    const id = resolve_party_id(parties[idx]);
     if (!id) return;
     router.push(`/party?id=${id}`);
   };
@@ -112,9 +138,11 @@ export default function PartiesPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
           {parties.map((party, index) => {
             const is_open = expanded_index === index;
+            const goals = parse_goals(party.party_goals);
+            const party_id = resolve_party_id(party);
             return (
               <motion.div
-                key={`${party.ID ?? party.party_name}-${index}`}
+                key={`${party_id || party.party_name}-${index}`}
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
@@ -176,6 +204,7 @@ export default function PartiesPage() {
 
                     <button
                       onClick={() => handle_vote(index)}
+                      disabled={!party_id}
                       className="inline-flex items-center gap-2 rounded-xl px-4 py-2 font-semibold text-white bg-gradient-to-r from-primary-500 to-secondary-500 hover:from-primary-400 hover:to-secondary-400 transition"
                     >
                       Vote This Party <ArrowRight size={16} />
@@ -184,26 +213,26 @@ export default function PartiesPage() {
 
                   {/* Goals list */}
                   <AnimatePresence initial={false}>
-                    {is_open &&
-                      Array.isArray(party.party_goals) &&
-                      party.party_goals.length > 0 && (
-                        <motion.ul
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.25, ease: "easeOut" }}
-                          className="mt-5 overflow-hidden space-y-2"
-                        >
-                          {party.party_goals.map((goal, goal_index) => (
-                            <li
-                              key={`${party.ID}-goal-${goal_index}`}
-                              className="rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-white/90"
-                            >
-                              • {goal}
-                            </li>
-                          ))}
-                        </motion.ul>
-                      )}
+                    {is_open && goals.length > 0 && (
+                      <motion.ul
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.25, ease: "easeOut" }}
+                        className="mt-5 overflow-hidden space-y-2"
+                      >
+                        {goals.map((goal, goal_index) => (
+                          <li
+                            key={`${
+                              party_id || party.party_name
+                            }-goal-${goal_index}`}
+                            className="rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-white/90"
+                          >
+                            • {goal}
+                          </li>
+                        ))}
+                      </motion.ul>
+                    )}
                   </AnimatePresence>
                 </div>
               </motion.div>

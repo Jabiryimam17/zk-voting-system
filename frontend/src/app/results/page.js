@@ -3,9 +3,8 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { EmojiEvents } from "@mui/icons-material";
-import { election_contract } from "@ethereum/election.js";
-import { ethers } from "ethers";
-import { decodeBytes32String } from "ethers";
+import { election_contract } from "@ethereum/election";
+import { decodeBytes32String, encodeBytes32String } from "ethers";
 import axios from "axios";
 
 const election_host =
@@ -29,20 +28,32 @@ export default function ElectionStatus() {
           withCredentials: true,
         });
         const contract_instance = await election_contract();
-        const api_parties = response.data.parties;
-        const contract_parties_id = await contract_instance.fetch_parties();
+        const api_parties = response.data.parties || [];
+        let party_ids = [];
 
-        const parties_map = new Map(api_parties.map((p) => [p["ID"], p]));
-        const total_supporters = await contract_instance.total_participants();
-        const full_parties = await Promise.all(
-          contract_parties_id.map(async (party_id_bytes) => {
-            let party_id;
+        if (typeof contract_instance.fetch_parties === "function") {
+          const contract_parties_id = await contract_instance.fetch_parties();
+          party_ids = contract_parties_id.map((party_id_bytes) => {
             try {
-              party_id = decodeBytes32String(party_id_bytes);
+              return decodeBytes32String(party_id_bytes);
             } catch (e) {
               console.error("Error decoding party_id:", party_id_bytes, e);
-              party_id = party_id_bytes; // Fallback to raw if decoding fails
+              return null;
             }
+          });
+        } else {
+          party_ids = api_parties.map(
+            (party) => party?.ID || party?.id || party?.party_id || null
+          );
+        }
+
+        const parties_map = new Map(
+          api_parties.map((p) => [p["ID"] || p.id || p.party_id, p])
+        );
+        const total_supporters = await contract_instance.total_participants();
+        const full_parties = await Promise.all(
+          party_ids.map(async (party_id) => {
+            if (!party_id) return null;
 
             const party = parties_map.get(party_id);
             if (!party) {
@@ -50,6 +61,7 @@ export default function ElectionStatus() {
               return null;
             }
 
+            const party_id_bytes = encodeBytes32String(String(party_id));
             const supporters_big_number = await contract_instance.parties(
               party_id_bytes
             );

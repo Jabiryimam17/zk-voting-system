@@ -7,7 +7,6 @@
     <list default="true" id="bff0f43c-f2de-4352-a79a-8b4840aae26f" name="Changes" comment="">
       <change afterPath="$USER_HOME$/PycharmProjects/id-registrations/backend/scripts/add-parties-sample.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/party/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/party/page.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +19,7 @@
     </persistenceIdMap>
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="277" />
+    <option name="cachedIndexableFilesCount" value="284" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -73,61 +72,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.5578341937280142" />
-      <entry key="MS500" value="3.9897607132978252" />
-      <entry key="S2" value="7.128572626547446" />
-      <entry key="S5" value="8.606521152244655" />
-      <entry key="S10" value="9.251626522533542" />
-      <entry key="S30" value="9.73780326130542" />
-      <entry key="S60" value="9.867225274826845" />
-      <entry key="M2" value="9.935799698706592" />
-      <entry key="M5" value="10.566849858149336" />
-      <entry key="M10" value="15.745951274923623" />
-      <entry key="M15" value="24.257025046946822" />
-      <entry key="M30" value="69.57638374280106" />
-      <entry key="H1" value="203.44965356515462" />
-      <entry key="H2" value="437.2652539308442" />
-      <entry key="H4" value="716.4180125743031" />
-      <entry key="D1" value="1203.411315027823" />
-      <entry key="W1" value="1333.3982306089795" />
+      <entry key="MS100" value="1.6784432927318597E-40" />
+      <entry key="MS500" value="1.109127145384654E-8" />
+      <entry key="S2" value="0.010262314823420307" />
+      <entry key="S5" value="0.1601393765746371" />
+      <entry key="S10" value="0.40017441717498586" />
+      <entry key="S30" value="0.7473770822554217" />
+      <entry key="S60" value="1.440477370778261" />
+      <entry key="M2" value="6.823438165259659" />
+      <entry key="M5" value="26.14972186799805" />
+      <entry key="M10" value="44.847313354101914" />
+      <entry key="M15" value="58.403185254690825" />
+      <entry key="M30" value="105.79194260560685" />
+      <entry key="H1" value="236.3355502095727" />
+      <entry key="H2" value="470.1030772225153" />
+      <entry key="H4" value="754.2404977669528" />
+      <entry key="D1" value="1255.8261493468742" />
+      <entry key="W1" value="1390.5153523400534" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="2.34246E-319" />
-      <entry key="S5" value="3.530802551982295E-128" />
-      <entry key="S10" value="1.8790450617910348E-64" />
-      <entry key="S30" value="5.821442307161077E-22" />
-      <entry key="S60" value="2.8261812844104043E-11" />
-      <entry key="M2" value="7.834430146271405E-6" />
-      <entry key="M5" value="0.016804593984139936" />
-      <entry key="M10" value="0.22464145161711935" />
-      <entry key="M15" value="0.5595173010414493" />
-      <entry key="M30" value="1.8843373637231982" />
-      <entry key="H1" value="5.51546642012265" />
-      <entry key="H2" value="12.451230645726987" />
-      <entry key="H4" value="20.851971901956407" />
-      <entry key="D1" value="34.78722733575923" />
-      <entry key="W1" value="38.35737967306686" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.000000000015612" />
+      <entry key="S2" value="1.00251767437552" />
+      <entry key="S5" value="1.1320448401242875" />
+      <entry key="S10" value="1.5095535491084038" />
+      <entry key="S30" value="2.265467836140124" />
+      <entry key="S60" value="2.5905091004736662" />
+      <entry key="M2" value="2.7834340009214635" />
+      <entry key="M5" value="2.9149595836495137" />
+      <entry key="M10" value="3.0722255254257234" />
+      <entry key="M15" value="3.333019613931745" />
+      <entry key="M30" value="4.503295455496968" />
+      <entry key="H1" value="7.943610121632216" />
+      <entry key="H2" value="14.793359617265526" />
+      <entry key="H4" value="23.295006122239325" />
+      <entry key="D1" value="37.63083604322567" />
+      <entry key="W1" value="41.332702443416025" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.4194823646425896" />
-      <entry key="MS500" value="3.869467321537633" />
-      <entry key="S2" value="7.059112854344678" />
-      <entry key="S5" value="8.570298172421904" />
-      <entry key="S10" value="9.231591284330657" />
-      <entry key="S30" value="9.730632222721814" />
-      <entry key="S60" value="9.86357355757177" />
-      <entry key="M2" value="9.933963672704431" />
-      <entry key="M5" value="10.58277731605969" />
-      <entry key="M10" value="15.969419147375866" />
-      <entry key="M15" value="24.81497068074315" />
-      <entry key="M30" value="71.4582794637862" />
-      <entry key="H1" value="208.96059942270855" />
-      <entry key="H2" value="449.70952142258244" />
-      <entry key="H4" value="737.2629171758272" />
-      <entry key="D1" value="1238.1962239189158" />
-      <entry key="W1" value="1371.755234870435" />
+      <entry key="MS100" value="6.09536400830865E-4" />
+      <entry key="MS500" value="0.22750970620684371" />
+      <entry key="S2" value="0.6952381164026898" />
+      <entry key="S5" value="1.0602495119650759" />
+      <entry key="S10" value="1.6821484664177553" />
+      <entry key="S30" value="2.8698519998216883" />
+      <entry key="S60" value="3.9454795107116625" />
+      <entry key="M2" value="9.55947757474736" />
+      <entry key="M5" value="29.04381260597688" />
+      <entry key="M10" value="47.90817839494219" />
+      <entry key="M15" value="61.727904244561906" />
+      <entry key="M30" value="110.28956625154208" />
+      <entry key="H1" value="244.27323273934275" />
+      <entry key="H2" value="484.88890018330636" />
+      <entry key="H4" value="777.5281539197283" />
+      <entry key="D1" value="1293.4545987189417" />
+      <entry key="W1" value="1431.8476683763224" />
     </decayedShown>
   </component>
   <component name="PackageJsonUpdateNotifier">
@@ -162,81 +161,81 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "JavaScript Debug.Next.js: debug client-side.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Node.js.CreateConnection.js.executor": "Run",
-    "Node.js.GenProof.js.executor": "Run",
-    "Node.js.GenSign.js.executor": "Run",
-    "Node.js.IntBuffConv.js.executor": "Run",
-    "Node.js.babyjub.js.executor": "Debug",
-    "Node.js.cryptohelpers.js.executor": "Run",
-    "Node.js.decryptit.js.executor": "Run",
-    "Node.js.election.js.executor": "Run",
-    "Node.js.ether.js.executor": "Run",
-    "Node.js.index.js.executor": "Run",
-    "Node.js.parties.js.executor": "Run",
-    "Node.js.server.js.executor": "Run",
-    "Node.js.test.js.executor": "Run",
-    "Node.js.users.js.executor": "Run",
-    "Node.js.web3.js.executor": "Run",
-    "Notification.DisplayName-DoNotAsk-WindowsDefender": "Microsoft Defender may affect IDE",
-    "Notification.DoNotAsk-WindowsDefender": "true",
-    "Python tests.Python tests in test_merkle.py.executor": "Run",
-    "Python.GenPriv.executor": "Run",
-    "Python.MerkleTree.executor": "Run",
-    "Python.RegisterCitizens.executor": "Run",
-    "Python.__init__.executor": "Run",
-    "Python.poseidon.executor": "Run",
-    "Python.routes.executor": "Run",
-    "ReactCreateComponentLastSelected": "arrowFunctionComponent",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "copilot.chat.legacySessionMetadata.migrated": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "javascript.preferred.runtime.type.id": "node",
-    "js.debugger.nextJs.config.created.client": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/jabir/PycharmProjects/id-registrations/backend",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.back.executor": "Run",
-    "npm.dev (1).executor": "Run",
-    "npm.dev (2).executor": "Run",
-    "npm.dev.executor": "Run",
-    "npm.front.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "/home/jabir/WebstormProjects/zk-voting-system/backend/node_modules/prettier",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "junie.project.settings",
-    "solidity.tutorial.shown.welcome": "true",
-    "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "C:\\Users\\Jabir\\AppData\\Roaming\\JetBrains\\IntelliJIdea2025.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;JavaScript Debug.Next.js: debug client-side.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Node.js.CreateConnection.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.GenProof.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.GenSign.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.IntBuffConv.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.babyjub.js.executor&quot;: &quot;Debug&quot;,
+    &quot;Node.js.cryptohelpers.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.decryptit.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.election.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.ether.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.index.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.parties.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.server.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.test.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.users.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.web3.js.executor&quot;: &quot;Run&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-WindowsDefender&quot;: &quot;Microsoft Defender may affect IDE&quot;,
+    &quot;Notification.DoNotAsk-WindowsDefender&quot;: &quot;true&quot;,
+    &quot;Python tests.Python tests in test_merkle.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.GenPriv.executor&quot;: &quot;Run&quot;,
+    &quot;Python.MerkleTree.executor&quot;: &quot;Run&quot;,
+    &quot;Python.RegisterCitizens.executor&quot;: &quot;Run&quot;,
+    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.poseidon.executor&quot;: &quot;Run&quot;,
+    &quot;Python.routes.executor&quot;: &quot;Run&quot;,
+    &quot;ReactCreateComponentLastSelected&quot;: &quot;arrowFunctionComponent&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;copilot.chat.legacySessionMetadata.migrated&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/jabir/PycharmProjects/id-registrations/backend&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.back.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev (1).executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev (2).executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.front.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/jabir/WebstormProjects/zk-voting-system/backend/node_modules/prettier&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;junie.project.settings&quot;,
+    &quot;solidity.tutorial.shown.welcome&quot;: &quot;true&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Jabir\\AppData\\Roaming\\JetBrains\\IntelliJIdea2025.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql",
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;,
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -458,7 +457,8 @@
       <workItem from="1781420450803" duration="3778000" />
       <workItem from="1781430623450" duration="9309000" />
       <workItem from="1784120043307" duration="2654000" />
-      <workItem from="1784131069085" duration="6259000" />
+      <workItem from="1784131069085" duration="7176000" />
+      <workItem from="1784182272393" duration="257000" />
     </task>
     <servers />
   </component>

@@ -23,6 +23,29 @@ const election_host =
 const frontend_host =
   process.env.NEXT_PUBLIC_FRONTEND_HOST || "http://localhost:3000";
 
+const normalize_goals = (raw_goals) => {
+  if (Array.isArray(raw_goals)) {
+    return raw_goals.map((goal) => String(goal).trim()).filter(Boolean);
+  }
+
+  if (typeof raw_goals !== "string") return [];
+
+  let text = raw_goals.trim();
+  if (!text) return [];
+
+  text = text
+    .replace(/^[\[{]+/, "")
+    .replace(/[\]}]+$/, "")
+    .replace(/\/+$/, "")
+    .replace(/\"/g, '"')
+    .replace(/[“”]/g, '"');
+
+  return text
+    .split(",")
+    .map((goal) => goal.replace(/^\s*"+|"+\s*$/g, "").trim())
+    .filter(Boolean);
+};
+
 const PartyProfile = () => {
   const [national_id, set_national_id] = useState("");
   const search_params = useSearchParams();
@@ -86,14 +109,7 @@ const PartyProfile = () => {
             );
           }
 
-          // Normalize goals: array or comma-separated string -> array
-          let goals = partyData?.party_goals ?? [];
-          if (typeof goals === "string") {
-            goals = goals
-              .split(",")
-              .map((g) => g.trim())
-              .filter(Boolean);
-          }
+          const goals = normalize_goals(partyData?.party_goals);
 
           set_party({
             party_leader_name: partyData?.party_leader_name || "",

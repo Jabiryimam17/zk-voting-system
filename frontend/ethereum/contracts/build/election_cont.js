@@ -75,6 +75,13 @@ export const abi = [
   },
   {
     inputs: [],
+    name: "fetch_parties",
+    outputs: [{ internalType: "bytes32[]", name: "", type: "bytes32[]" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
     name: "host",
     outputs: [{ internalType: "string", name: "", type: "string" }],
     stateMutability: "view",
